@@ -7,6 +7,7 @@ import ErrorBoundary from './components/atomic/error-boundary/error-boundary.com
 import Header from './components/header/header.component';
 import Spinner from './components/spinner/spinner.component';
 import FirebasePage from "./pages/firebaseDBupload/firebaseDB.components";
+import SingleArticlePage from './pages/singleArticle/singleArticle.component';
 import { selectDarkMode } from "./redux/themes/themes.selectors";
 import { checkUserSession } from './redux/user/user.actions';
 import { selectCurrentUser } from './redux/user/user.selectors';
@@ -16,7 +17,6 @@ import {
 
   ThemeLight
 } from "./themes/themes";
-
 const HomePage = lazy(() => import('./pages/homepage/homepage.component'));
 const LandingPage = lazy(() => import('./pages/landingpage/landingpage.component'));
 const ShopPage = lazy(() => import('./pages/shop/shop.component'));
@@ -31,7 +31,7 @@ const App = ({ checkUserSession, currentUser, darkMode }) => {
   }, [checkUserSession]);
 
   return (
-    <ThemeProvider theme={ThemeLight}> 
+    <ThemeProvider theme={ThemeLight}>
       <ThemeProvider theme={darkMode ? invertTheme : noChange}>
         <div>
           <GlobalStyle darkMode />
@@ -41,8 +41,14 @@ const App = ({ checkUserSession, currentUser, darkMode }) => {
           <Switch>
             <ErrorBoundary>
               <Suspense fallback={<Spinner />}>
-                <Route exact path="/" component={HomePage} />
+                <Route exact path="/">
+                  {/* <Route path="articles/:slug" component={ArticleList} /> */}
+                  <Route path="/articles/:slug" component={SingleArticlePage} />
+                  <Route exact path="/" component={HomePage} />
+                </Route>
+
                 <Route exact path="/landing" component={LandingPage} />
+
                 <Route path="/shop" component={ShopPage} />
                 <Route exact path="/checkout" component={CheckoutPage} />
                 <Route

@@ -13,6 +13,12 @@ export const selectPosts = createSelector(
     // content ? Object.keys(content).map((key) => content[key]) : []
 );
 
+export const selectPost = createSelector(
+  [selectData],
+  (Data) => Data ? Data.items : []
+    // content ? Object.keys(content).map((key) => content[key]) : []
+);
+
 export const selectPostsPreview = createSelector(
   [selectData],
   (Data) =>  Data ? Object.keys(Data).map((key) => Data[key]) : []

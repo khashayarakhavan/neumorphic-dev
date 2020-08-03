@@ -2,7 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { selectData, selectPosts } from "../../../redux/content/content.selectors";
-import ArticleBox from '../../atomic/article-item/article-item.component';
+import ArticleItem from '../../atomic/article-item/article-item.component';
+// import { fetchContentStart } from "../../redux/content/content.actions";
 import { ArticlesContainer } from "./articles.styles";
 
 // const articles = articles.map((article, i) => (
@@ -22,10 +23,11 @@ export const Articles = ({ posts, data }) => {
   console.log('posts are ...', posts);
   return (
     <ArticlesContainer>
-    {/* <h1>Dalam Kalti</h1> */}
-    {posts.map((post,i) => console.log('hello #',i))}
-    {posts.map((post,i) => <ArticleBox id={i} post={post} /> )}
-
+      {/* <h1>Dalam Kalti</h1> */}
+      {posts.map((post, i) => console.log("hello #", i))}
+      {posts.map((post, i, ...otherSectionProps) => (
+        <ArticleItem id={i} post={post} {...otherSectionProps} />
+      ))}
     </ArticlesContainer>
   );
 };
@@ -35,4 +37,8 @@ const mapStateToProps = createStructuredSelector({
   posts: selectPosts,
 });
 
-export default connect(mapStateToProps)(Articles);
+// const mapDispatchToProps = (dispatch) => ({
+//   fetchContentStart: () => dispatch(fetchContentStart()),
+// });
+
+export default connect(mapStateToProps, null)(Articles);

@@ -11,19 +11,36 @@ const contentReducer = (state = INITIAL_STATE, action) => {
     case ContentActionTypes.FETCH_CONTENT_START:
       return {
         ...state,
-        isFetching: true
+        isFetching: true,
       };
     case ContentActionTypes.FETCH_CONTENT_SUCCESS:
       return {
         ...state,
         isFetching: false,
-        data: action.payload
+        data: action.payload,
       };
     case ContentActionTypes.FETCH_CONTENT_FAILURE:
       return {
         ...state,
         isFetching: false,
-        errorMessage: action.payload
+        errorMessage: action.payload,
+      };
+    case ContentActionTypes.FETCH_ARTICLE_START:
+      return {
+        ...state,
+        isFetching: true,
+      };
+    case ContentActionTypes.FETCH_ARTICLE_SUCCESS:
+      return {
+        ...state,
+        isFetching: false,
+        data: action.payload,
+      };
+    case ContentActionTypes.FETCH_ARTICLE_FAILURE:
+      return {
+        ...state,
+        isFetching: false,
+        errorMessage: action.payload,
       };
     default:
       return state;
