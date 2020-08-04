@@ -5,3 +5,7 @@ export const HomePageContainer = styled.div`
   flex-direction: column;
   align-items: center;
 `;
+
+export const ArticlePageContainer = styled.div`
+  width: 100%;
+`;

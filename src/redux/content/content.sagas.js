@@ -28,9 +28,11 @@ export function* fetchSingleArticleAsync({payload: slug}) {
              content_type: "post",
              "fields.slug": slug,
            });
-           log("Received Single Article from Contentful API:", data);
+           const post = data.items[0];
+           
+           log("Received Single Article from Contentful API:", post);
            // const post = data.items; // location of posts inside JSON data received from Contentful API.
-           yield put(fetchSingleArticleSuccess(data));
+           yield put(fetchSingleArticleSuccess(post));
          } catch (error) {
            log("oops");
            yield put(fetchSingleArticleFailure(error.message));

@@ -7,17 +7,27 @@ export const selectData = createSelector(
   (content) => content.data
 );
 
+export const selectPost = createSelector(
+  [selectContent],
+  (content) => content.post
+);
+
+export const selectFetching = createSelector(
+  [selectContent],
+  (content) => content.isFetching
+);
+
 export const selectPosts = createSelector(
   [selectData],
   (Data) => Data ? Data.items : []
     // content ? Object.keys(content).map((key) => content[key]) : []
 );
 
-export const selectPost = createSelector(
-  [selectData],
-  (Data) => Data ? Data.items : []
-    // content ? Object.keys(content).map((key) => content[key]) : []
-);
+// export const selectPost = createSelector(
+//   [selectData],
+//   (Data) => Data ? Data.items : []
+//     // content ? Object.keys(content).map((key) => content[key]) : []
+// );
 
 export const selectPostsPreview = createSelector(
   [selectData],

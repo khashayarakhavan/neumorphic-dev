@@ -1,11 +1,20 @@
 // --> START OF IMPORT SECTION <-- //
 
 //Libraries
-import React, { useEffect } from "react";
+import React, { lazy, Suspense, useEffect } from "react";
 import { connect } from "react-redux";
-import SingleArticle from '../../components/atomic/article-single/article-single.component';
+import { Route } from "react-router-dom";
+import { createStructuredSelector } from "reselect";
+import Spinner from "../../components/spinner/spinner.component";
 //Actions
 import { fetchContentStart, fetchSingleArticleStart } from "../../redux/content/content.actions";
+import { selectPost } from '../../redux/content/content.selectors';
+import { ArticlePageContainer } from './singleArticle.styles';
+// import SingleArticle from '../../components/atomic/article-single/article-single.component';
+const SingleArticle = lazy(
+  () => import('../../components/atomic/article-single/article-single.component')
+);
+
 // --> END OF IMPORT SECTION <-- //
 
 /*
@@ -15,25 +24,33 @@ import { fetchContentStart, fetchSingleArticleStart } from "../../redux/content/
 <--
 */
 
-const SingleArticlePage = ({ fetchContentStart, fetchSingleArticleStart, match }) => {
+const SingleArticlePage = ({ fetchContentStart, fetchSingleArticleStart, match , post}) => {
   useEffect(() => {
     fetchSingleArticleStart(match.params.slug);
   }, [fetchSingleArticleStart]);
 
   console.log('match :D ', match.params);
-
-  return (
-    <div>
-      {/* <iframe
+{
+  /* <iframe
         src="https://pasteapp.com/p/KlvWDQenHd2/embed?view=2Rn8cAnnmcW"
         width="480"
         height="480"
         scrolling="no"
         frameborder="0"
         allowfullscreen
-      ></iframe> */}
-      <SingleArticle  />
-    </div>
+      ></iframe> */
+}
+  return (
+    
+     <ArticlePageContainer>
+      <Suspense fallback={<Spinner />}>
+        <Route
+          exact
+          path={`${match.path}`}
+          component={SingleArticle}
+        />
+      </Suspense>
+    </ArticlePageContainer>
   );
 };
 
@@ -42,4 +59,10 @@ const mapDispatchToProps = (dispatch) => ({
   fetchSingleArticleStart: (slug) => dispatch(fetchSingleArticleStart(slug)),
 });
 
-export default connect(null, mapDispatchToProps)(SingleArticlePage);
+const mapStateToProps = createStructuredSelector({
+
+  post: selectPost
+  // collection: selectCollection(ownProps.match.params.collectionId)(state),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(SingleArticlePage);

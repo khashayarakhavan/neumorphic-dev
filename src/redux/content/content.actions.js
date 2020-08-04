@@ -19,7 +19,7 @@ export const fetchSingleArticleStart = slug => ({
   payload: slug,
 });
 
-export const fetchSingleArticleSuccess = (post) => ({
+export const fetchSingleArticleSuccess = post => ({
   type: ContentActionTypes.FETCH_ARTICLE_SUCCESS,
   payload: post,
 });
