@@ -14,7 +14,7 @@ export const fetchContentFailure = errorMessage => ({
   payload: errorMessage
 });
 
-export const fetchSingleArticleStart = (slug) => ({
+export const fetchSingleArticleStart = slug => ({
   type: ContentActionTypes.FETCH_ARTICLE_START,
   payload: slug,
 });

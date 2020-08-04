@@ -20,33 +20,40 @@ export function* fetchContentAsync() {
   }
 }
 
-export function* fetchSingleArticleAsync(slug) {
-  try {
-    log('Helllooooooooo');
-    const data = yield client.getEntries({content_type: 'post' , 'fields.slug': slug});
-    log('Received Single Article from Contentful API:', data); 
-    // const post = data.items; // location of posts inside JSON data received from Contentful API.
-    yield put(fetchSingleArticleSuccess(data));
-  } catch (error) {
-    log('oops');
-    yield put(fetchSingleArticleFailure(error.message));
-  }
-}
+export function* fetchSingleArticleAsync({payload: slug}) {
+         try {
+           log("Helllooooooooo");
+           log("This is slug", slug);
+           const data = yield client.getEntries({
+             content_type: "post",
+             "fields.slug": slug,
+           });
+           log("Received Single Article from Contentful API:", data);
+           // const post = data.items; // location of posts inside JSON data received from Contentful API.
+           yield put(fetchSingleArticleSuccess(data));
+         } catch (error) {
+           log("oops");
+           yield put(fetchSingleArticleFailure(error.message));
+         }
+       }
 
-export function* fetchContentStart() {
+export function* onfetchContentStart() {
   yield takeLatest(
     ContentActionTypes.FETCH_CONTENT_START,
     fetchContentAsync
   );
 }
 
-export function* fetchSingleArticleStart(slug) {
+export function* onfetchSingleArticleStart() {
   yield takeLatest(
     ContentActionTypes.FETCH_ARTICLE_START,
-    fetchSingleArticleAsync(slug)
+    fetchSingleArticleAsync
   );
 }
 
 export function* contentSagas() {
-  yield all([call(fetchContentStart),call(fetchSingleArticleStart)]);
+  yield all([
+    call(onfetchContentStart),
+    call(onfetchSingleArticleStart)
+  ]);
 }

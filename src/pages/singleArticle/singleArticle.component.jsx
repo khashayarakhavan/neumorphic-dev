@@ -39,7 +39,7 @@ const SingleArticlePage = ({ fetchContentStart, fetchSingleArticleStart, match }
 
 const mapDispatchToProps = (dispatch) => ({
   fetchContentStart: () => dispatch(fetchContentStart()),
-  fetchSingleArticleStart: () => dispatch(fetchSingleArticleStart()),
+  fetchSingleArticleStart: (slug) => dispatch(fetchSingleArticleStart(slug)),
 });
 
 export default connect(null, mapDispatchToProps)(SingleArticlePage);

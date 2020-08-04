@@ -3,7 +3,8 @@ import ContentActionTypes from './content.types';
 const INITIAL_STATE = {
   data: null, // Main entry for SHOP_DATA import in our app.
   isFetching: false,
-  errorMessage: undefined
+  errorMessage: undefined,
+  post: null,
 };
 
 const contentReducer = (state = INITIAL_STATE, action) => {
@@ -29,12 +30,13 @@ const contentReducer = (state = INITIAL_STATE, action) => {
       return {
         ...state,
         isFetching: true,
+        // post: action.payload
       };
     case ContentActionTypes.FETCH_ARTICLE_SUCCESS:
       return {
         ...state,
         isFetching: false,
-        data: action.payload,
+        post: action.payload,
       };
     case ContentActionTypes.FETCH_ARTICLE_FAILURE:
       return {
