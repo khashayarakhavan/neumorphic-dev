@@ -31,9 +31,9 @@ export function* updateCartInFirebase() {
   const currentUser = yield select(selectCurrentUser);
   if (currentUser) {
     try {
-      const cartRef = yield getUserCartRef(currentUser.id);
-      const cartItems = yield select(selectCartItems);
-      yield cartRef.update({ cartItems });
+      const cartRef = yield getUserCartRef(currentUser.id); // find if there is/not a Ref existing in database.
+      const cartItems = yield select(selectCartItems); // select cartItems from store.
+      yield cartRef.update({ cartItems }); // update firestore collection with cartItems 
     } catch (error) {
       console.log(error);
     }
