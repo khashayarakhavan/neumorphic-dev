@@ -1,6 +1,6 @@
 import firebase from 'firebase/app'; // import firebase utility core library.
-import 'firebase/firestore'; // automatically attaches to firebase keyword as methods.
 import 'firebase/auth'; // attaches auth method to firebase core.
+import 'firebase/firestore'; // automatically attaches to firebase keyword as methods.
 
 const { log } = console;
 const config = { // your keys to access Firebase project.
@@ -109,6 +109,19 @@ export const getCurrentUser = () => {
       resolve(userAuth);
     }, reject);
   });
+};
+
+export const getUserCartRef = async (userId) => {
+  const cartsRef = firestore.collection("carts").where("userId", "==", userId);
+  const snapShot = await cartsRef.get();
+
+  if (snapShot.empty) {
+    const cartDocRef = firestore.collection("carts").doc();
+    await cartDocRef.set({ userId, cartItems: [] });
+    return cartDocRef;
+  } else {
+    return snapShot.docs[0].ref;
+  }
 };
 
 export const auth = firebase.auth(); // export anything related to authentication from firebase as a function. import it anywhere needed in the app.

@@ -18,13 +18,13 @@ export const CollectionPage = ({ collection, isFetching }) => {
   if (isFetching) {
   const { title, items } = collection;
   console.log('i am fetching');
-  } else {
-    console.log("i am not fetching");
-  }
+} else {
+  console.log("i am not fetching");
+}
   
   return (
     <div>
-    {!isFetching ? <p>loading content for you</p> : 
+    {isFetching ? <p>loading content for you</p> : 
     <CollectionPageContainer>
       <CollectionTitle>{title}</CollectionTitle>
       <CollectionItemsContainer>

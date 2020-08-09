@@ -1,22 +1,20 @@
-import CartActionTypes from './cart.types';
 import {
-  toggleCartHidden,
   addItem,
-  removeItem,
-  clearItemFromCart,
-  clearCart
-} from './cart.actions';
 
-describe('toggleCartHidden action', () => {
-  it('should create the toggleHidden action', () => {
+  clearCart, clearItemFromCart, removeItem, toggleCartHidden
+} from "./cart.actions";
+import CartActionTypes from "./cart.types";
+
+describe("toggleCartHidden action", () => {
+  it("should create the toggleHidden action", () => {
     expect(toggleCartHidden().type).toEqual(CartActionTypes.TOGGLE_CART_HIDDEN);
   });
 });
 
-describe('addItem action', () => {
-  it('should create the addItem action', () => {
+describe("addItem action", () => {
+  it("should create the addItem action", () => {
     const mockItem = {
-      id: 1
+      id: 1,
     };
 
     const action = addItem(mockItem);
@@ -26,10 +24,10 @@ describe('addItem action', () => {
   });
 });
 
-describe('removeItem action', () => {
-  it('should create the removeItem action', () => {
+describe("removeItem action", () => {
+  it("should create the removeItem action", () => {
     const mockItem = {
-      id: 1
+      id: 1,
     };
 
     const action = removeItem(mockItem);
@@ -39,10 +37,10 @@ describe('removeItem action', () => {
   });
 });
 
-describe('clearItemFromCart action', () => {
-  it('should create the clearItemFromCart action', () => {
+describe("clearItemFromCart action", () => {
+  it("should create the clearItemFromCart action", () => {
     const mockItem = {
-      id: 1
+      id: 1,
     };
 
     const action = clearItemFromCart(mockItem);
@@ -52,8 +50,8 @@ describe('clearItemFromCart action', () => {
   });
 });
 
-describe('clearCart action', () => {
-  it('should create the clearCart action', () => {
+describe("clearCart action", () => {
+  it("should create the clearCart action", () => {
     expect(clearCart().type).toEqual(CartActionTypes.CLEAR_CART);
   });
 });
