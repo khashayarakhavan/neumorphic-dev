@@ -62,7 +62,7 @@ const mapDispatchToProps = (dispatch) => ({
 const mapStateToProps = createStructuredSelector({
 
   post: selectPost
-  // collection: selectCollection(ownProps.match.params.collectionId)(state),
+  
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(SingleArticlePage);

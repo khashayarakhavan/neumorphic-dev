@@ -1,8 +1,8 @@
 import React from "react";
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
-import { fetchSingleArticleStart } from "../../../redux/content/content.actions";
 import { selectFetching, selectPost } from "../../../redux/content/content.selectors";
+import Spinner from '../../spinner/spinner.component';
 
 const singleArticle = ({post, isFetching}) => {
 
@@ -21,7 +21,7 @@ const singleArticle = ({post, isFetching}) => {
       /> */}
 
       {isFetching ? (
-        <p>loading content...</p>
+        <Spinner />
       ) : (
         <div>
           <div className="no-gutter">
@@ -65,8 +65,8 @@ const mapStateToProps = createStructuredSelector({
   isFetching: selectFetching,
 });
 
-const mapDispatchToProps = (dispatch) => ({
-  fetchSingleArticleStart: (slug) => dispatch(fetchSingleArticleStart(slug)),
-});
+// const mapDispatchToProps = (dispatch) => ({
+//   fetchSingleArticleStart: (slug) => dispatch(fetchSingleArticleStart(slug)),
+// });
 
-export default connect(mapStateToProps, mapDispatchToProps)(singleArticle);
+export default connect(mapStateToProps)(singleArticle);
