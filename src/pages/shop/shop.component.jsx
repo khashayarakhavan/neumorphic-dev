@@ -11,7 +11,7 @@ const CollectionsOverviewContainer = lazy(
 
 const CollectionPageContainer = lazy(() =>
   
-  import('../collection/collection.component')
+  import('../collection/collection.container')
 );
 
 export const ShopPage = ({ fetchCollectionsStart, match }) => {

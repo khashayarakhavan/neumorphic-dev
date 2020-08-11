@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { selectData, selectPosts } from "../../../redux/content/content.selectors";
-import ArticleItem from '../../atomic/article-item/article-item.component';
+import ArticleItemContainer from '../../atomic/article-item/article-item.container';
 // import { fetchContentStart } from "../../redux/content/content.actions";
 import { ArticlesContainer } from "./articles.styles";
 
@@ -26,7 +26,7 @@ export const Articles = ({ posts, data }) => {
       {/* <h1>Dalam Kalti</h1> */}
       {posts.map((post, i) => console.log("hello #", i))}
       {posts.map((post, i, ...otherSectionProps) => (
-        <ArticleItem id={i} post={post} {...otherSectionProps} />
+        <ArticleItemContainer id={i} post={post} {...otherSectionProps} />
       ))}
     </ArticlesContainer>
   );

@@ -1,7 +1,7 @@
-import React, { Suspense } from "react";
+import React from "react";
 import { connect } from "react-redux";
 import CollectionItem from "../../components/atomic/collection-item/collection-item.component";
-import Spinner from "../../components/spinner/spinner.component";
+import Spinner2 from "../../components/spinner/spinner.component2";
 import {
   selectCollection,
   selectIsCollectionFetching
@@ -26,9 +26,9 @@ export const CollectionPage = ({ collection, isFetching }) => {
   
   return (
     
-    <Suspense fallback={<Spinner />}>
+    
       <div>
-      {isFetching ? <Spinner /> :
+      {isFetching ? <Spinner2 /> :
           <CollectionPageContainer>
             <CollectionTitle>{collection.title}</CollectionTitle>
             <CollectionItemsContainer>
@@ -40,7 +40,7 @@ export const CollectionPage = ({ collection, isFetching }) => {
         
       }
       </div>
-    </Suspense>
+    
   );
   
 };

@@ -29,14 +29,14 @@ const HomePage = ({ fetchContentStart }) => {
     <HomePageContainer>
       <Directory />
       <Articles />
-      <iframe
+      {/* <iframe
         src="https://pasteapp.com/p/KlvWDQenHd2/embed?view=2Rn8cAnnmcW"
         width="480"
         height="480"
         scrolling="no"
         frameborder="0"
         allowfullscreen
-      ></iframe>
+      ></iframe> */}
     </HomePageContainer>
   );
 };

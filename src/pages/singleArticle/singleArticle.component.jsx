@@ -1,18 +1,20 @@
 // --> START OF IMPORT SECTION <-- //
 
 //Libraries
-import React, { lazy, Suspense, useEffect } from "react";
+import React, { lazy, useEffect } from "react";
 import { connect } from "react-redux";
 import { Route } from "react-router-dom";
 import { createStructuredSelector } from "reselect";
-import Spinner from "../../components/spinner/spinner.component";
 //Actions
 import { fetchContentStart, fetchSingleArticleStart } from "../../redux/content/content.actions";
 import { selectPost } from '../../redux/content/content.selectors';
 import { ArticlePageContainer } from './singleArticle.styles';
 // import SingleArticle from '../../components/atomic/article-single/article-single.component';
-const SingleArticle = lazy(
-  () => import('../../components/atomic/article-single/article-single.component')
+// const SingleArticle = lazy(
+//   () => import('../../components/atomic/article-single/article-single.component')
+// );
+const SingleArticleContainer = lazy(
+  () => import('../../components/atomic/article-single/article-single.container')
 );
 
 // --> END OF IMPORT SECTION <-- //
@@ -41,15 +43,14 @@ const SingleArticlePage = ({ fetchContentStart, fetchSingleArticleStart, match ,
       ></iframe> */
 }
   return (
-    
-     <ArticlePageContainer>
-      <Suspense fallback={<Spinner />}>
+    <ArticlePageContainer>
+      {/* <Suspense fallback={<Spinner />}> */}
         <Route
           exact
           path={`${match.path}`}
-          component={SingleArticle}
+          component={SingleArticleContainer}
         />
-      </Suspense>
+      {/* </Suspense> */}
     </ArticlePageContainer>
   );
 };
