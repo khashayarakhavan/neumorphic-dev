@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import CollectionItem from "../../components/atomic/collection-item/collection-item.component";
-import Spinner2 from "../../components/spinner/spinner.component2";
+import Loading from "../../components/complex/loading/loading";
 import {
   selectCollection,
   selectIsCollectionFetching
@@ -26,9 +26,8 @@ export const CollectionPage = ({ collection, isFetching }) => {
   
   return (
     
-    
       <div>
-      {isFetching ? <Spinner2 /> :
+      {isFetching ? <Loading/> :
           <CollectionPageContainer>
             <CollectionTitle>{collection.title}</CollectionTitle>
             <CollectionItemsContainer>
