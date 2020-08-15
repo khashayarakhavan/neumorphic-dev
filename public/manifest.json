@@ -1,25 +1,25 @@
 {
-  "short_name": "Crwn-Clothing",
-  "name": "Crwn-Clothing by Yihua",
+  "short_name": "khashi-web-app",
+  "name": "khashi-web by AftoflBig5",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "khashi.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "crwn-512x512.png",
+      "src": "child-512px.png",
       "sizes": "512x512",
       "type": "image/png"
     },
     {
-      "src": "crwn-192x192.png",
+      "src": "child-192px.png",
       "sizes": "192x192",
       "type": "image/png"
     }
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#c1ff11",
+  "background_color": "#ff11f2"
 }

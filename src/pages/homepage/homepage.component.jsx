@@ -1,7 +1,7 @@
 // --> START OF IMPORT SECTION <-- //
 
 //Libraries
-import React, { useEffect } from "react";
+import React, { Profiler, useEffect } from "react";
 import { connect } from "react-redux";
 //Components
 import Articles from '../../components/complex/articles/articles.component';
@@ -24,11 +24,15 @@ const HomePage = ({ fetchContentStart }) => {
   useEffect(() => {
     fetchContentStart();
   }, [fetchContentStart]);
-
+  
   return (
     <HomePageContainer>
       <Directory />
+      <Profiler id='Articles' onRender={(id, phase, actualDuration) => {
+        console.log({id, phase, actualDuration});
+      } }>
       <Articles />
+      </Profiler>
       {/* <iframe
         src="https://pasteapp.com/p/KlvWDQenHd2/embed?view=2Rn8cAnnmcW"
         width="480"
