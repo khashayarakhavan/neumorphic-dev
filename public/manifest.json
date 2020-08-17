@@ -1,9 +1,9 @@
 {
-  "short_name": "khashi-web-app",
-  "name": "khashi-web by AftoflBig5",
+  "short_name": "aftoflBig5",
+  "name": "khashi-web by aftoflBig5",
   "icons": [
     {
-      "src": "khashi.ico",
+      "src": "favicon.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
@@ -20,6 +20,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#c1ff11",
-  "background_color": "#ff11f2"
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
 }
