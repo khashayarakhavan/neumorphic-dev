@@ -2,23 +2,20 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import sprite from "../../assets/spriteSVG/sprite-medals.svg";
-
+import { ReactComponent as CrownIcon } from '../../assets/SVG/crown.svg';
 import { toggleCartHidden } from '../../redux/cart/cart.actions';
 import { selectCartItemsCount } from '../../redux/cart/cart.selectors';
-
-import { ReactComponent as CrownIcon } from '../../assets/SVG/crown.svg';
-
-import "./search-icon.styles.scss";
 import {
   SearchContainer,
   StarIcon,
   SVG
 } from './search-icon.styles';
+import "./search-icon.styles.scss";
 
 export const SearchBox = ({ toggleCartHidden, itemCount }) => (
          <SearchContainer>
            {/* -- Style 1 to import SVG: direct SVG file & edit partly using Sass -- */}
-           <CrownIcon className="nanai-icon" onClick={toggleCartHidden} />
+           <CrownIcon id="nanai-icon" className="nanai-icon" onClick={toggleCartHidden} />
 
            {/* -- Style 2 to import SVG: SVG file inside StyledComponents -- */}
            <StarIcon />
