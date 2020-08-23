@@ -86,17 +86,73 @@ export const OptionsContainer = styled.div`
   height: 100%;
   display: flex;
   align-items: center;
+  margin-right: 20px;
   justify-content: flex-end;
   
   @media screen and (max-width: 800px) {
     width: 80%;
   }
-`;
 
-export const OptionLink = styled(Link)`
-  padding: 10px 15px;
-  cursor: pointer;
   
 `;
 
+
+export const Span = styled.span`
+  color: #eb5e28;
+`;
+
+export const Span2 = styled.span`
+         color: #003153;
+       `;
+export const Span3 = styled.span`
+         color: #003153;
+       `;
+
+
+export const OptionLink = styled(Link)`
+         margin-right: 10px;
+
+         background: ${(props) =>
+           props.active ? "rgba(125, 205, 255, 10%)" : "none"};
+         display: flex;
+         ${"" /* flex-direction: column; */}
+         justify-content: center;
+         align-items: center;
+         height: 40px;
+         width: 80px;
+         border-radius: 5px;
+         font-size: 10px;
+         font-weight: 800;
+         /*   font-style: italic; */
+         /*   color: #D65524; */
+         /*   color: #230E05; */
+         color: #003153;
+         ${"" /* color: red; */}
+         /*   color: rgba(#003153, 90%); */
+         font-family: "Montserrat", sans-serif;
+         transition: all 0.8s;
+         ${"" /* background: rgba(240, 125, 180, 0.3); */}
+         box-shadow: 3px 3px 7px 2px rgba(125, 126, 127, 0.42),
+           -3px -3px 12px 2px rgba(255, 255, 255, 0.63);
+         ${"" /* padding: 10px 15px; */}
+         cursor: pointer;
+
+         &:hover {
+           ${"" /* color: rgba(125, 126, 127, 0.5); */}
+           color: white;
+           background-color: #003153;
+         }
+
+         &:hover ${Span} {
+           color: #ffffff;
+         }
+         &:hover ${Span2} {
+           color: #ffffff;
+         }
+         &:hover ${Span3} {
+           color: #eb5e28;
+         }
+       `;
+
 OptionLink.displayName = 'OptionLink';
+
