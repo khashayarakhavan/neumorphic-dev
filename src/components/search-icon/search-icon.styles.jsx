@@ -1,6 +1,5 @@
 import styled from 'styled-components';
-
-import {ReactComponent as StarSvg} from "../../assets/SVG/star.svg";
+import { ReactComponent as StarSvg } from "../../assets/SVG/star.svg";
 
 export const SearchContainer = styled.div`
   width: 100px;
@@ -9,9 +8,19 @@ export const SearchContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
+
+  .star {
+    ${'' /* fill: blue; */}
+  }
   
 `;
 
+export const SearchContainerSmall = styled(SearchContainer)`
+         padding: 0 10px;
+         width: 50px;
+         height: 50px;
+       `;
+       
 export const SVG = styled.svg`
   width: 24px;
   height: 24px;

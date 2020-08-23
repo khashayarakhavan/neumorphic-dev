@@ -44,7 +44,7 @@ const App = ({ checkUserSession, currentUser, darkMode }) => {
                 <Route exact path="/">
                   {/* <Route path="articles/:slug" component={ArticleList} /> */}
                   <Route path="/articles/:slug" component={SingleArticlePage} />
-                  <Route exact path="/" component={HomePage} />
+                  <Route exact path="/hello" component={HomePage} />
                 </Route>
 
                 <Route exact path="/landing" component={LandingPage} />

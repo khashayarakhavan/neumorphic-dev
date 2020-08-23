@@ -1,19 +1,16 @@
 
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
-
 import { createGlobalStyle } from 'styled-components';
-import { backgroundColor } from "./mode/index";
-import { fontSize } from "./sizes/index";
-
 import { selectDarkMode } from "../redux/themes/themes.selectors";
+import { fontSize } from "./sizes/index";
 
 const GlobalStyle = createGlobalStyle`
 	body {
 		font-family: 'Open Sans Condensed';
-		padding: 20px 40px;
-		background-color: ${(props) => props.theme.background};
-		color: ${(props) => props.theme && props.theme.foreground};
+		${'' /* padding: 0px 40px; */}
+		${'' /* background-color: ${(props) => props.theme.background};
+		color: ${(props) => props.theme && props.theme.foreground}; */}
 		
 		${
       "" /* background-color: ${(props) => props.darkMode ? 'black' : backgroundColor}; */
