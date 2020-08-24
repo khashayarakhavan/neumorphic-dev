@@ -19,8 +19,8 @@ import {
   Logo as Image,
   LogoCard,
   Span,
-  Span2,
-  Span3,
+  PrussianBlue_Orange,
+  White_Orange,
 
   OptionLink, OptionsContainer
 } from './header.styles';
@@ -47,13 +47,15 @@ export const Header = (props) => {
              Toggle Size
            </Button> */}
       <OptionsContainer>
-        <OptionLink  to="/hire">
-          <Span>h</Span>
-          <Span>ire</Span>
-          <Span>Me</Span>
-          <Span3>&nbsp;!</Span3>
+        <OptionLink variant="active" to="/hire">
+          <White_Orange></White_Orange>
+          <Span>hire</Span>
+          <White_Orange>Me</White_Orange>
+          {/* <Span>ire</Span> */}
+          {/* <Span>Me</Span> */}
+          <Span> </Span>
         </OptionLink>
-        <OptionLink to="/about">aboutMe</OptionLink>
+        <OptionLink to="/about">/about<PrussianBlue_Orange>Me</PrussianBlue_Orange></OptionLink>
         {/* {currentUser ? ( // ternary operator to check if currentUser is valid. which means the user is signed-in.
                // then load sign-out button. if there isn't load sign-in button.
                <OptionLink as="div" onClick={signOutStart}>

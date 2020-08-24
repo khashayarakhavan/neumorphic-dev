@@ -1,5 +1,25 @@
 
 export default {
+  shadows: {
+    lightest: "rgba(125,126,127,0.2)",
+    lighter: " rgba(125,126,127,0.4)",
+    light: "grey",
+    dark: "darkgrey",
+  },
+
+  highlights: {
+    lightest: "rgba(125,126,127,0.2)",
+    lighter: " rgba(125,126,127,0.4)",
+    light: "grey",
+    dark: "darkgrey",
+  },
+
+  CTA: {
+    lightest: "rgba(125,126,127,0.2)",
+    lighter: " rgba(125,126,127,0.4)",
+    light: "grey",
+    dark: "darkgrey",
+  },
   white: "#fff",
   primary: "black",
   black: "black",
