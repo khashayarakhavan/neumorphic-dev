@@ -55,7 +55,12 @@ export const Header = (props) => {
           {/* <Span>Me</Span> */}
           <Span> </Span>
         </OptionLink>
-        <OptionLink to="/about">/about<PrussianBlue_Orange>Me</PrussianBlue_Orange></OptionLink>
+        <OptionLink to="/aboutMe">
+          /about<PrussianBlue_Orange>Me</PrussianBlue_Orange>
+        </OptionLink>
+        <OptionLink to="/myWorks">
+          /my<PrussianBlue_Orange>Works</PrussianBlue_Orange>
+        </OptionLink>
         {/* {currentUser ? ( // ternary operator to check if currentUser is valid. which means the user is signed-in.
                // then load sign-out button. if there isn't load sign-in button.
                <OptionLink as="div" onClick={signOutStart}>
