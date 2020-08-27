@@ -10,7 +10,7 @@ class Template extends Component {
                         <div className="feature-box u-center-text">
                             <i className="feature-box__icon icon-basic-world"></i>
                             <h3 className="heading-tertiary u-margin-bottom-small">
-                                Explore the world
+                                Plan
                   </h3>
                             <p className="feature-box__text">
                                 shaja baja much loven disch very guten disch shaja baja much
@@ -23,7 +23,7 @@ class Template extends Component {
                         <div className="feature-box u-center-text">
                             <i className="feature-box__icon icon-basic-map"></i>
                             <h3 className="heading-tertiary u-margin-bottom-small">
-                                Explore the world
+                                Design
                   </h3>
                             <p className="feature-box__text">
                                 shaja baja much loven disch very guten disch shaja baja much
@@ -36,7 +36,7 @@ class Template extends Component {
                         <div className="feature-box u-center-text">
                             <i className="feature-box__icon icon-basic-heart"></i>
                             <h3 className="heading-tertiary u-margin-bottom-small">
-                                Explore the world
+                                Develop
                   </h3>
                             <p className="feature-box__text">
                                 shaja baja much loven disch very guten disch shaja baja much
@@ -49,7 +49,7 @@ class Template extends Component {
                         <div className="feature-box u-center-text">
                             <i className="feature-box__icon icon-basic-compass"></i>
                             <h3 className="heading-tertiary u-margin-bottom-small">
-                                Explore the world
+                                Deploy
                   </h3>
                             <p className="feature-box__text">
                                 shaja baja much loven disch very guten disch shaja baja much

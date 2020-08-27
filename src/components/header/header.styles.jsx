@@ -32,7 +32,7 @@ export const HeaderContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 25px;
+  ${'' /* margin-bottom: 25px; */}
   ${"" /* background-color: ${Headerbackground};  */}
   color: 'pink';
 
@@ -141,11 +141,25 @@ export const Span2 = styled.span`
   color: #003153;
 `;
 export const White_Orange = styled.span`
-  color: #f8f8f9;
-  font-family: inherit;
-  font-size: inherit;
-  font-weight: inherit;
-`;
+         color: #f8f8f9;
+         font-family: inherit;
+         font-size: inherit;
+         font-weight: inherit;
+
+         &:hover {
+           color: #eb5e28;
+         }
+       `;
+export const Orange_White = styled.span`
+         color: #eb5e28;
+         font-family: inherit;
+         font-size: inherit;
+         font-weight: inherit;
+
+         &:hover {
+           color: #f8f8f9;
+         }
+       `;
 
 export const PrussianBlue_Orange = styled.span.attrs((props) => ({
   type: "text",

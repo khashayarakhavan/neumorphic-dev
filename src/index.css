@@ -12,3 +12,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.ROBOT {
+ background: linear-gradient(-45deg, rgba(240,240,243,1), rgba(209,217,230,1)) !important;
+}

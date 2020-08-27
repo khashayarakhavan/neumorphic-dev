@@ -1,7 +1,8 @@
 .header {
-    background-color: $color-grey-dark-1;
+    // background-color: $color-grey-dark-1;
     grid-column: full-start / col-end 6;
-    background-image: linear-gradient(rgba($color-secondary, .93), rgba($color-secondary, .93)), url(../../assets/img/hero.jpeg);
+    // background-image: linear-gradient(rgba($color-secondary, .93), rgba($color-secondary, .93)), url(../../assets/img/hero.jpeg);
+     background: linear-gradient(-45deg, rgba(240,240,243,1), rgba(209,217,230,1)) !important;
     background-size: cover;
     background-position: center;
     padding: 8rem;

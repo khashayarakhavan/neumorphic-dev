@@ -133,9 +133,8 @@ ORDER: Base + Typography > General layout + Grid > Page layout > Components
       flex-direction: column; } }
 
 .header {
-  background-color: #54483A;
   grid-column: full-start / col-end 6;
-  background-image: linear-gradient(rgba(16, 29, 44, 0.93), rgba(16, 29, 44, 0.93)), url(../../assets/img/hero.jpeg);
+  background: linear-gradient(-45deg, #f0f0f3, #d1d9e6) !important;
   background-size: cover;
   background-position: center;
   padding: 8rem;
@@ -653,6 +652,78 @@ body {
     color: #f9f7f6; }
   .heading-4--dark {
     color: #54483A; }
+
+.H1 {
+  font-family: 'Lora', serif !important;
+  font-size: 95px !important;
+  font-weight: 800 !important;
+  line-height: 60px !important;
+  margin-top: 60px !important;
+  margin-bottom: 30px !important;
+  margin-right: 30px !important;
+  margin-left: 30px !important;
+  margin-block-start: 60px !important;
+  margin-block-end: 30px !important; }
+
+.H2 {
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 58px !important;
+  font-weight: 600 !important;
+  line-height: 60px !important;
+  margin-top: 60px !important;
+  margin-bottom: 30px !important;
+  margin-right: 30px !important;
+  margin-left: 30px !important;
+  margin-block-start: 60px !important;
+  margin-block-end: 30px !important; }
+
+.H3 {
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 46px !important;
+  font-weight: 600 !important;
+  line-height: 60px !important;
+  margin-top: 60px !important;
+  margin-bottom: 30px !important;
+  margin-right: 30px !important;
+  margin-left: 30px !important;
+  margin-block-start: 60px !important;
+  margin-block-end: 30px !important; }
+
+.H4 {
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 32px !important;
+  font-weight: 500 !important;
+  line-height: 30px !important;
+  margin-top: 30px !important;
+  margin-bottom: 30px !important;
+  margin-right: 30px !important;
+  margin-left: 30px !important;
+  margin-block-start: 60px !important;
+  margin-block-end: 30px !important; }
+
+.TEXT {
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  line-height: 30px !important;
+  margin-top: 60px !important;
+  margin-bottom: 30px !important;
+  margin-right: 30px !important;
+  margin-left: 30px !important;
+  margin-block-start: 30px !important;
+  margin-block-end: 30px !important; }
+
+.ICON {
+  font-family: 'Lora', serif !important;
+  font-size: 13px !important;
+  font-weight: 400 !important;
+  line-height: 30px !important;
+  margin-top: 60px !important;
+  margin-bottom: 30px !important;
+  margin-right: 30px !important;
+  margin-left: 30px !important;
+  margin-block-start: 30px !important;
+  margin-block-end: 30px !important; }
 
 .btn-changing {
   font-size: 1.5rem;

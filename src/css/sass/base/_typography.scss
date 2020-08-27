@@ -107,3 +107,82 @@ body {
     &--light { color: $color-grey-light-1; }
     &--dark { color: $color-grey-dark-1; }
 }
+
+.H1 {
+    font-family: 'Lora', serif !important;
+    
+    font-size: 95px !important;
+    font-weight: 800 !important;
+    line-height: 60px !important;
+    margin-top: 60px !important;
+    margin-bottom: 30px !important;
+    margin-right: 30px !important;
+    margin-left: 30px !important;
+    margin-block-start: 60px !important;
+    margin-block-end: 30px !important;
+}
+.H2 {
+    font-family: 'Montserrat', sans-serif !important;
+    // font-family: 'Montserrat', sans-serif !important;
+    
+    font-size: 58px !important;
+    font-weight: 600 !important;
+    line-height: 60px !important;
+    margin-top: 60px !important;
+    margin-bottom: 30px !important;
+    margin-right: 30px !important;
+    margin-left: 30px !important;
+    margin-block-start: 60px !important;
+    margin-block-end: 30px !important;
+}
+.H3 {
+    // font-family: 'Lora', serif !important;
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 46px !important;
+    font-weight: 600 !important;
+    line-height: 60px !important;
+    margin-top: 60px !important;
+    margin-bottom: 30px !important;
+    margin-right: 30px !important;
+    margin-left: 30px !important;
+    margin-block-start: 60px !important;
+    margin-block-end: 30px !important;
+}
+.H4 {
+    // font-family: 'Lora', serif !important;
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 32px !important;
+    font-weight: 500 !important;
+    line-height: 30px !important;
+    margin-top: 30px !important;
+    margin-bottom: 30px !important;
+    margin-right: 30px !important;
+    margin-left: 30px !important;
+    margin-block-start: 60px !important;
+    margin-block-end: 30px !important;
+}
+.TEXT {
+    // font-family: 'Lora', serif !important;
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    line-height: 30px !important;
+    margin-top: 60px !important;
+    margin-bottom: 30px !important;
+    margin-right: 30px !important;
+    margin-left: 30px !important;
+    margin-block-start: 30px !important;
+    margin-block-end: 30px !important;
+}
+.ICON {
+    font-family: 'Lora', serif !important;
+    font-size: 13px !important;
+    font-weight: 400 !important;
+    line-height: 30px !important;
+    margin-top: 60px !important;
+    margin-bottom: 30px !important;
+    margin-right: 30px !important;
+    margin-left: 30px !important;
+    margin-block-start: 30px !important;
+    margin-block-end: 30px !important;
+}
