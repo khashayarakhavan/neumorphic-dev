@@ -48,9 +48,10 @@ export const Header = (props) => {
            </Button> */}
       <OptionsContainer>
         <OptionLink variant="active" to="/hire">
-          <White_Orange></White_Orange>
+          {/* <White_Orange></White_Orange>
           <Span>hire</Span>
-          <White_Orange>Me</White_Orange>
+          <White_Orange>Me</White_Orange> */}
+          /hire<PrussianBlue_Orange>Me</PrussianBlue_Orange>
           {/* <Span>ire</Span> */}
           {/* <Span>Me</Span> */}
           <Span> </Span>
