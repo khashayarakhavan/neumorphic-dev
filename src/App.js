@@ -5,6 +5,11 @@ import { createStructuredSelector } from 'reselect';
 import { ThemeProvider } from "styled-components";
 import ErrorBoundary from './components/atomic/error-boundary/error-boundary.component';
 import Header from './components/header/header.component';
+// import HeroHeader from './components/complex/hero-header/heroHeader.component';
+import HeroHeader from './components/complex/hero-header/heroHeader.component';
+import SectionFeatures from './components/Static/sectionFeatures';
+import UpButton from './components/atomic/up-button/up-button.component';
+import MenuNavigation from './components/atomic/menu-navigation/menu-navigation.component';
 import Spinner from './components/spinner/spinner.component';
 import FirebasePage from "./pages/firebaseDBupload/firebaseDB.components";
 import SingleArticlePage from './pages/singleArticle/singleArticle.component';
@@ -42,6 +47,12 @@ const App = ({ checkUserSession, currentUser, darkMode }) => {
             <ErrorBoundary>
               <Suspense fallback={<Spinner />}>
                 <Route exact path="/">
+                  <HeroHeader />
+                  {/* <HeroHeader /> */}
+                  <UpButton />
+                  <SectionFeatures />
+                  <HeroHeader />
+                  <MenuNavigation />
                   {/* <Route path="articles/:slug" component={ArticleList} /> */}
                   <Route path="/articles/:slug" component={SingleArticlePage} />
                   <Route exact path="/hello" component={HomePage} />

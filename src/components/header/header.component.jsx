@@ -28,7 +28,7 @@ import {
 export const Header = (props) => {
   const { currentUser, hidden, signOutStart , toggleDarkMode} = props;
   return (
-    <HeaderContainer>
+    <HeaderContainer id="topMenu">
       <LogoContainer to="/signin">
         <LogoCard>
           <Image src={homeLogo} />

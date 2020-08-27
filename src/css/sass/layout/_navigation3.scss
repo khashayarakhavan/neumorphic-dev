@@ -14,11 +14,10 @@
         border-radius: 50%;
         top: 6rem;
         right: 6rem;
-        z-index: $layer-top;
-        box-shadow: 0 1rem 2rem rgba($color-black, .2);
+        z-index: $layer-1;
+        box-shadow: 0 1rem 2rem rgba($color-black, 0.3);
         cursor: pointer;
-        overflow: hidden;
-
+        
         // RESPONSIVE: Define the margins of foreground circle in the menu button. 
         @include respond(tab-port) {
             top: 4rem;
@@ -29,37 +28,37 @@
             right: 1rem;
         }
 
-        &::after {
-            content: "";
-            display: inline-block;
-            border: .6rem solid rosybrown;
-            height: 100%;
-            width: 100%;
-            border-radius: 50%;
-            background-color: $color-white;
-            opacity: .5;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: $layer-B1;
-            transition: all .9s ease-in-out;
-        }
-
         &:hover {
-            box-shadow: 0 1rem 2rem rgba($color-black,.2);
+        
+        box-shadow: 0 1rem 2rem rgba($color-black,.2);
 
-            &::after {
-                transform: scaleX(1.4) scaleY(1.6);
-                // transform: rotate(-5deg);
-                opacity: 0;
-                // background-color: $color-primary-dark;
-                border: 5px solid red;
-            }
+        &::after {
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+            // background-color: $color-primary-dark;
+            border: 5px solid red;
+          
         }
+        }
+
+    &::after {
+        content: "";
+        display: inline-block;
+        border: 5px solid white;
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+        background-color: $color-white;
+        opacity: .5;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .9s;
+    }
 
     }
 
-    // Menu Design
     &__background {
         height: 6rem;
         width: 6rem;
@@ -135,18 +134,19 @@
         
     }
 
-    //Functionality Structure
-
-    // Scale the background --was hidden behind button, 90 times bigger
-    // Create a pouring-the-water feel.  
+    //Functionality
     &__checkbox:checked ~ &__background {
         transform: scale(90);
+        // width: 10vw;
+        // height: 100vh;
+        // top: 0;
+        // right: 0;
     }
 
     &__checkbox:checked ~ &__nav {
         opacity: 1;
         width: 100%;
-        z-index: $layer-1;
+        z-index: $layer-2;
     }
 
     //Icon
@@ -175,12 +175,11 @@
         &::after { top: .8rem;}
     }
 
-    // move 1st copy of the bar icon
     &__button:hover &__icon::before {
         top: 1rem;
         
     }
-    // move 2nd copy of the bar icon
+
     &__button:hover &__icon::after {
         top: -1rem;
         
