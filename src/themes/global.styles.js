@@ -7,6 +7,8 @@ import { fontSize } from "./sizes/index";
 
 const GlobalStyle = createGlobalStyle`
 	body {
+		${'' /* margin: 0px auto; */}
+		
 		font-family: 'Open Sans Condensed';
 		${'' /* padding: 0px 40px; */}
 		${'' /* background-color: ${(props) => props.theme.background};
@@ -21,7 +23,7 @@ const GlobalStyle = createGlobalStyle`
 		font-size: ${fontSize};
 		
 		@media screen and (max-width: 800px) {
-			padding: 10px;
+			${'' /* padding: 10px; */}
 		}
 	}
 

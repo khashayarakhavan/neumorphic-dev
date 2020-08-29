@@ -31,14 +31,23 @@ export const HeaderContainer = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
+
   justify-content: space-between;
-  ${'' /* margin-bottom: 25px; */}
+  ${"" /* margin-bottom: 25px; */}
   ${"" /* background-color: ${Headerbackground};  */}
   color: 'pink';
 
   ${"" /* background-color: ${(props) => props.theme.background }; */}
-  background: linear-gradient(-45deg, rgba(240,240,243,1), rgba(209,217,230,1));
+  ${"" /* background: linear-gradient(-45deg, rgba(240,240,243,1), rgba(209,217,230,1)); */}
 
+box-shadow:  ${({
+    variant,
+  }) =>
+    variant === "active"
+      ? ` 4px 4px 15px 2px rgba(125, 126, 127, 0.42),
+           -3px -3px 12px 2px rgba(255, 255, 255, 0.93), inset 0px -4px 0px 0px #D65524;`
+      : ` 0px 0px 15px 2px rgba(125, 126, 127, 0.542),
+           -1px -1px 12px 2px rgba(255, 255, 255, 0.93);`};
   /* Color the border and text with theme.main */
   ${"" /* color: ${(props) => props.theme.main}; */}
   ${"" /* border: 5px solid ${(props) => props.theme.foreground}; */}
@@ -55,6 +64,7 @@ export const HeaderContainer = styled.div`
 // };
 
 export const LogoContainer = styled(Link)`
+
   height: 100px;
   ${"" /* width: 50px; */}
   ${"" /* background: rgba(125, 126, 127, 0.15); */}
@@ -229,12 +239,16 @@ ${
   "" /* box-shadow: 4px 4px 15px 2px rgba(125, 126, 127, 0.42),
            -3px -3px 12px 2px rgba(255, 255, 255, 0.93), inset 0px -4px 0px 0px #D65524; */
 }
-box-shadow:  ${({ variant }) =>
-         variant === "active"
-           ? ` 4px 4px 15px 2px rgba(125, 126, 127, 0.42),
+
+
+  box-shadow:  ${({ variant }) =>
+    variant === "active"
+      ? ` 4px 4px 15px 2px rgba(125, 126, 127, 0.42),
            -3px -3px 12px 2px rgba(255, 255, 255, 0.93), inset 0px -4px 0px 0px #D65524;`
-           : ` 4px 4px 15px 2px rgba(125, 126, 127, 0.42),
+      : ` 4px 4px 15px 2px rgba(125, 126, 127, 0.42),
            -3px -3px 12px 2px rgba(255, 255, 255, 0.93);`};
+
+
 border-radius: 1px;
 border-bottom-left-radius: 0px;
 border-bottom-right-radius: 0px;
@@ -243,7 +257,13 @@ border-bottom-right-radius: 0px;
            
 ${"" /* inset 0px -3px 0px 0px #D65524 */}
 transition: box-shadow 0.25s cubic-bezier(.98,.13,.96,.34) 0.75s, 
-         background-color .5s  ease 0s ;
+         background-color .5s  ease 0s   ;
+         
+         
+        
+&:hover {transition: box-shadow 0.25s cubic-bezier(.98,.13,.96,.34) 0.75s, 
+         background-color .5s  ease 0s  ;}
+
            
 
  
@@ -267,11 +287,9 @@ transition: box-shadow 0.25s cubic-bezier(.98,.13,.96,.34) 0.75s,
 
   &::before,
   &::after {
-    ${'' /* border: 3px solid transparent; */}
+    ${"" /* border: 3px solid transparent; */}
     border: ${({ variant }) =>
-      variant === "active"
-        ? "3px solid transparent"
-        : "none"};
+      variant === "active" ? "3px solid transparent" : "none"};
     border-radius: 1px;
 border-bottom-left-radius: 0px;
 border-bottom-right-radius: 0px;
@@ -291,12 +309,19 @@ border-bottom-right-radius: 0px;
   }  */}
 
 &::before {
+    transition: border-color 0.2s ease  .1s,
+    width 0s ease 0.8s,
+    height 0s ease .8s ;
+     
     bottom: 0;
     right: 0;
   }
 
   ${"" /* // And this the bottom & left borders (expands left, then up) */}
   &::after {
+    transition: border-color 0.2s  .1s,
+    width 0s ease 0.8s,
+    height 0s ease .8s ;
     top: 0;
     left: 0;
   }
@@ -329,10 +354,13 @@ border-bottom-right-radius: 0px;
     
     border-top-color: #D65524; 
     border-right-color: #D65524;
-    transition:
+    
+      transition:
       height .5s ease , // Delay And then height 
       width .5s ease  .5s ,// Width expands first
       border-top-color 0s .5s;
+    
+
   }
 
   
