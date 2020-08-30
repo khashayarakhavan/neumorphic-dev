@@ -30,9 +30,9 @@ export const Header = (props) => {
   return (
     <HeaderContainer id="topMenu">
       <LogoContainer to="/signin">
-        <LogoCard>
+        {/* <LogoCard> */}
           <Image src={homeLogo} />
-        </LogoCard>
+        {/* </LogoCard> */}
       </LogoContainer>
       {/* <Button kind="warning" onClick={toggleDarkMode}>
         Toggle Mode
@@ -56,7 +56,7 @@ export const Header = (props) => {
           {/* <Span>Me</Span> */}
           <Span> </Span>
         </OptionLink>
-        <OptionLink variant="active"  to="/aboutMe">
+        <OptionLink  to="/aboutMe">
           /about<PrussianBlue_Orange>Me</PrussianBlue_Orange>
         </OptionLink>
         <OptionLink to="/myWorks">

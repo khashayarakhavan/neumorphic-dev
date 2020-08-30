@@ -6,14 +6,16 @@
     }
 
     &__button {
+        // margin-top: 5rem;
+        
         background-color: $color-white;
         height: 7rem;
         width: 7rem;
         text-align: center;
         position: fixed;
         border-radius: 50%;
-        top: 6rem;
-        right: 6rem;
+        top: 10rem;
+        right: 3rem;
         z-index: $layer-top;
         box-shadow: 0 1rem 2rem rgba($color-black, .2);
         cursor: pointer;
@@ -61,12 +63,13 @@
 
     // Menu Design
     &__background {
+        // margin-top: 5rem;
         height: 6rem;
         width: 6rem;
         border-radius: 50%;  
         position: fixed;
-        top: 6.5rem;
-        right: 6.5rem;
+        top: 10.5rem;
+        right: 3.5rem;
         z-index: $layer-1;
         background-image: radial-gradient($color-primary-light, $color-primary-dark);
         transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);

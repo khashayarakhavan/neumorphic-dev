@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { Headerbackground } from "../../themes/mode/index";
 
 export const HeaderContainer = styled.div`
-         height: 70px;
+         height: 30px;
          width: 100%;
          display: flex;
          justify-content: space-between;

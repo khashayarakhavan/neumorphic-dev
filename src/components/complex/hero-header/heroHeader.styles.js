@@ -13,13 +13,28 @@ export const TeaOrCoffee = styled.a`
     margin-block-end: 30px !important;
          }
        `;
+export const HeroHeader = styled.header`
+    display: grid;
+  grid-template-columns: 1fr 1fr;
+         }
+       `;
+
+       export const HeroHeaderLeft = styled.div`
+    margin: 60px;
+    margin-top: 100px;
+    padding-left: 10px;
+         }
+       `;
+
 export const TEXT = styled.span`
 // this is a CSS comment inside styled components
  color: #094e7c;
+ display:block;
     font-family: 'Montserrat', sans-serif !important;
     font-size: 16px !important;
     font-weight: 400 !important;
     line-height: 30px !important;
+    margin-left: 5px;
     margin-top: 60px !important;
     margin-bottom: 30px !important;
     ${'' /* margin-right: 30px !important; */}
@@ -31,7 +46,9 @@ export const TEXT = styled.span`
 export const H1 = styled.span`
  ${"" /* font-family: 'Lora', serif !important; */}
      font-family: 'Montserrat', sans-serif !important;
-     color: #F8F8F9;
+     ${"" /* color: #F8F8F9; */}
+       color: #094e7c; 
+      ${'' /* color: #094e7c; */}
     font-size: 95px !important;
     font-weight: 800 !important;
     line-height: 60px !important;
@@ -45,18 +62,21 @@ export const H1 = styled.span`
        `;
 
 export const Button = styled.div`
+    align-self: flex-start;
   &,
   &:link,
   &:visited {
+
     font-family: "Montserrat", sans-serif !important;
+    display: block;
     font-size: 16px !important;
     font-weight: 400 !important;
     line-height: 30px !important;
     margin-top: 60px !important;
     margin-bottom: 30px !important;
     margin-right: 30px !important;
-    margin-left: 60px !important;
-    margin-block-start: 30px !important;
+    ${'' /* margin-left: 60px !important; */}
+    ${'' /* margin-block-start: 30px !important; */}
     margin-block-end: 30px !important;
     text-transform: uppercase;
     text-decoration: none;
@@ -77,7 +97,7 @@ export const Button = styled.div`
 
   &:hover {
     transform: translateY(-8px);
-    ${'' /* box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); */}
+    ${"" /* box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); */}
     background-color:  #F8F8F9;
     box-shadow:  4px 4px 15px 2px rgba(125, 126, 127, 0.42),
            -3px -3px 12px 2px rgba(255, 255, 255, 0.93); 

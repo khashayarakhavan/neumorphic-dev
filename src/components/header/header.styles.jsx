@@ -27,7 +27,7 @@ const Constant = styled.div.attrs((props) => ({
 // import { Headerbackground } from "../../themes/mode/index";
 
 export const HeaderContainer = styled.div`
-  height: 20rem;
+  height: 10rem;
   width: 100%;
   display: flex;
   align-items: center;
@@ -65,7 +65,7 @@ box-shadow:  ${({
 
 export const LogoContainer = styled(Link)`
 
-  height: 100px;
+  height: 50px;
   ${"" /* width: 50px; */}
   ${"" /* background: rgba(125, 126, 127, 0.15); */}
          margin-left: 30px;
@@ -73,6 +73,7 @@ export const LogoContainer = styled(Link)`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width
 
   @media screen and (max-width: 800px) {
     width: 50px;
@@ -95,7 +96,7 @@ export const LogoCard = styled.div`
          justify-content: center;
          align-items: center;
          height: 100px;
-         width: 100px;
+         width: 80px;
          border-radius: 12px;
          ${"" /* background-color: #ffd1c1; */}
          ${"" /* background-color: #fa9370; */}
@@ -170,6 +171,16 @@ export const Orange_White = styled.span`
            color: #f8f8f9;
          }
        `;
+export const LightBlue_DarkBlue = styled.span`
+  color: #003153;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+
+  &:hover {
+    color: #003153;
+  }
+`;
 
 export const PrussianBlue_Orange = styled.span.attrs((props) => ({
   type: "text",
