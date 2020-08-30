@@ -56,7 +56,7 @@ export const Header = (props) => {
           {/* <Span>Me</Span> */}
           <Span> </Span>
         </OptionLink>
-        <OptionLink to="/aboutMe">
+        <OptionLink variant="active"  to="/aboutMe">
           /about<PrussianBlue_Orange>Me</PrussianBlue_Orange>
         </OptionLink>
         <OptionLink to="/myWorks">
