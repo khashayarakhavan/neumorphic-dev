@@ -11,10 +11,12 @@ import {
   SVG
 } from './search-icon.styles';
 import "./search-icon.styles.scss";
-
+/* 
+* how to import SVG in React.js
+*/
 export const SearchBox = ({ toggleCartHidden, itemCount }) => (
          <SearchContainer>
-           {/* -- Style 1 to import SVG: direct SVG file & edit partly using Sass -- */}
+           {/* -- Style 1 how to import SVG: direct SVG file & edit partly using Sass -- */}
            <CrownIcon className="nanai-icon" onClick={toggleCartHidden} />
 
            {/* -- Style 2 to import SVG: SVG file inside StyledComponents -- */}

@@ -28,6 +28,18 @@ const ShopPage = lazy(() => import('./pages/shop/shop.component'));
 const SignInAndSignUpPage = lazy(() =>
   import('./pages/sign-in-and-sign-up/sign-in-and-sign-up.component')
 );
+
+// * checking different combinations of comments;
+// ? another comment 
+/*
+? how is everything?
+! are you okey!
+TODO never follow it
+* This still is logging
+
+
+
+*/
 const CheckoutPage = lazy(() => import('./pages/checkout/checkout.component'));
 
 const App = ({ checkUserSession, currentUser, darkMode }) => {

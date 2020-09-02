@@ -3,6 +3,7 @@ import styled from "styled-components";
 import colors from "../../../themes/colors";
 import { ColorsThemeFelal } from "../../../themes/colors";
 import { ThemeFelal } from "../../../themes/themes";
+import { ReactComponent as WebWeaverLogo } from "../../../assets/SVG/WebWeaver-Clue.svg";
 
 
 
@@ -111,11 +112,15 @@ export const Logo = styled.img`
   ${"" /* filter: brightness(95%) sepia(60%); */}
   box-shadow: 2px 2px 8px 2px rgba(125, 126, 127, 0.52),
            -3px -3px 8px 2px rgba(255, 255, 255, 0.63);
-
   ${"" /* background: rgba(125, 205, 255, 100%); */}
   ${"" /* background-color: red; */}
 `;
 
+export const LogoSVG = styled(WebWeaverLogo)`
+  width: 150px;
+  height: 150px;
+  fill: #eb5e28;
+`;
 export const OptionsContainer = styled.div`
          & > * {
            &::before,

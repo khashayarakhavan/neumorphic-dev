@@ -17,11 +17,13 @@ import CartDropdown from '../../complex/cart-dropdown/cart-dropdown.component';
 import {
   HeaderContainer,
   LogoContainer,
-  Logo as Image,
+  Logo,
   LogoCard,
+  LogoSVG,
   Span,
   PrussianBlue_Orange,
   White_Orange,
+
 
   OptionLink, OptionsContainer
 } from './header.styles';
@@ -32,7 +34,8 @@ export const Header = (props) => {
     <HeaderContainer id="topMenu">
       <LogoContainer to="/signin">
         {/* <LogoCard> */}
-          <Image src={homeLogo} />
+          {/* <Logo src={homeLogo} /> */}
+          <LogoSVG />
         {/* </LogoCard> */}
       </LogoContainer>
       {/* <Button kind="warning" onClick={toggleDarkMode}>
