@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from '../../../assets/icon/logo.png';
-import {Orange_White, LightBlue_DarkBlue} from '../../header/header.styles';
+import {Orange_White, LightBlue_DarkBlue} from '../../Sections/header/header.styles';
 import Lottie from "react-lottie";
 import * as buildProduct from "../../complex/loading/buildProduct";
 import { TeaOrCoffee, Button, TEXT, H1, HeroHeader ,HeroHeaderLeft } from "./heroHeader.styles";

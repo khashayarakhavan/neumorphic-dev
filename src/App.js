@@ -4,7 +4,7 @@ import { Redirect, Route, Switch } from 'react-router-dom';
 import { createStructuredSelector } from 'reselect';
 import { ThemeProvider } from "styled-components";
 import ErrorBoundary from './components/atomic/error-boundary/error-boundary.component';
-import Header from './components/header/header.component';
+import Header from './components/Sections/header/header.component';
 // import HeroHeader from './components/complex/hero-header/heroHeader.component';
 import HeroHeader from './components/complex/hero-header/heroHeader.component';
 import SectionFeatures from './components/Static/sectionFeatures';

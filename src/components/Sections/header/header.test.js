@@ -1,6 +1,6 @@
 import { shallow } from 'enzyme';
 import React from 'react';
-import CartDropdown from '../complex/cart-dropdown/cart-dropdown.component';
+import CartDropdown from '../../complex/cart-dropdown/cart-dropdown.component';
 import { Header } from './header.component';
 
 describe('Header component', () => {

@@ -1,27 +1,27 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import colors from "../../themes/colors";
-import { ColorsThemeFelal } from "../../themes/colors";
-import { ThemeFelal } from "../../themes/themes";
+import colors from "../../../themes/colors";
+import { ColorsThemeFelal } from "../../../themes/colors";
+import { ThemeFelal } from "../../../themes/themes";
 
-// ATTENTION!: this is an example of using attributes to improve our development process
-// by defining very specific static or dynamic props to our CSS .
+
+
+
+// ATTENTION!: this is an example of using attributes to improve our development process.
+// by defining very specific static or dynamic props to our CSS.
 const Constant = styled.div.attrs((props) => ({
-  // we can define static props
-  localShadow: "grey",
+  localShadow: "grey", // we can define static props.
   size: props.size || "1em",
-  // or we can define dynamic ones
-  foreground: props.theme.foreground || "green",
+  foreground: props.theme.foreground || "green", // or we can define dynamic ones
 }))`
   font-size: 1em;
   border: 2px solid palevioletred;
   border-radius: 3px;
   color: ${(props) => props.foreground};
-
   /* here we use the dynamically computed prop */
-  margin: ${(props) => props.size};
-  padding: ${(props) => props.size};
-`;
+  margin: ${(props) => props.size} ;
+  padding: ${(props) => props.size} ;
+`; 
 
 // import { background } from "../../themes/variants/buttonColor";
 // import { Headerbackground } from "../../themes/mode/index";
@@ -31,12 +31,10 @@ export const HeaderContainer = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
-
   justify-content: space-between;
   ${"" /* margin-bottom: 25px; */}
   ${"" /* background-color: ${Headerbackground};  */}
   color: 'pink';
-
   ${"" /* background-color: ${(props) => props.theme.background }; */}
   ${"" /* background: linear-gradient(-45deg, rgba(240,240,243,1), rgba(209,217,230,1)); */}
 
@@ -73,7 +71,7 @@ export const LogoContainer = styled(Link)`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width
+  
 
   @media screen and (max-width: 800px) {
     width: 50px;
@@ -161,6 +159,7 @@ export const White_Orange = styled.span`
            color: #eb5e28;
          }
        `;
+
 export const Orange_White = styled.span`
          color: #eb5e28;
          font-family: inherit;
@@ -171,6 +170,7 @@ export const Orange_White = styled.span`
            color: #f8f8f9;
          }
        `;
+
 export const LightBlue_DarkBlue = styled.span`
   color: #003153;
   font-family: inherit;
@@ -239,7 +239,7 @@ export const OptionLink = styled(Link)`
 
 ${"" /* border-radius: 255px 15px 225px 15px/15px 225px 15px 255px; */}
  ${"" /* animation: mymove 3s cubic-bezier(.98,.13,.96,.34) infinite; */}
-                      @keyframes mymove {
+@keyframes mymove {
   50% {border-bottom: 4px solid #D65524;}  
 }
             
@@ -263,12 +263,11 @@ ${
 border-radius: 1px;
 border-bottom-left-radius: 0px;
 border-bottom-right-radius: 0px;
-
            overflow: hidden;
-           
 ${"" /* inset 0px -3px 0px 0px #D65524 */}
 transition: box-shadow 0.25s cubic-bezier(.98,.13,.96,.34) 0.75s, 
-         background-color .5s  ease 0s   ;
+         background-color .5s  ease 0s,
+        ;
          
          
         
@@ -302,8 +301,8 @@ transition: box-shadow 0.25s cubic-bezier(.98,.13,.96,.34) 0.75s,
     border: ${({ variant }) =>
       variant === "active" ? "3px solid transparent" : "none"};
     border-radius: 1px;
-border-bottom-left-radius: 0px;
-border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
     
     ${"" /* border-radius: 3px; */}
     ${"" /* border-radius: 3px; */}
@@ -322,8 +321,7 @@ border-bottom-right-radius: 0px;
 &::before {
     transition: border-color 0.2s ease  .1s,
     width 0s ease 0.8s,
-    height 0s ease .8s ;
-     
+    height 0s ease .8s;
     bottom: 0;
     right: 0;
   }
@@ -388,37 +386,21 @@ border-bottom-right-radius: 0px;
       border-bottom-color 0s  1.5s, // Wait for ::before to finish before showing border
       width .5s ease 1.5s; // And then exanding width
   }
-     
-
-  
-
-
-
          display: flex;
-         
          justify-content: center;
          align-items: center;
          height: 40px;
          width: 80px;
-         
          font-size: 12px;
          font-weight: 800;
-         
          margin-right: 10px;
          color: #003153;
-         
-         
          font-family: "Montserrat", sans-serif;
          ${"" /* font-family: "Lora", serif; */}
-         
-         
-         
-         
          cursor: pointer;
 
          &:hover {
-           
-           background-color: ${({ variant }) =>
+            background-color: ${({ variant }) =>
              variant === "active"
                ? "var(--props-variant-active-background-color-onHover)"
                : "var(--props-variant-default-background-color-onHover)"};
@@ -426,8 +408,9 @@ border-bottom-right-radius: 0px;
 
          &:active {
            transform: translateY(2px);
-           box-shadow: 2px 2px 7px 2px rgba(125, 126, 127, 0.42),
-             -3px -3px 12px 2px rgba(255, 255, 255, 0.43);
+           transition: transform .25s ease;
+           ${'' /* box-shadow:  4px 4px 15px 2px rgba(125, 126, 127, 0.42),
+           -3px -3px 12px 2px rgba(255, 255, 255, 0.93), inset 0px -4px 0px 0px #D65524; */}
          }
 
          &:hover ${Span} {
