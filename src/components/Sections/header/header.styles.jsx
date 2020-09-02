@@ -4,6 +4,8 @@ import colors from "../../../themes/colors";
 import { ColorsThemeFelal } from "../../../themes/colors";
 import { ThemeFelal } from "../../../themes/themes";
 import { ReactComponent as WebWeaverLogo } from "../../../assets/SVG/WebWeaver-Clue.svg";
+import { ReactComponent as WebWeaverText } from "../../../assets/SVG/WebWeaver-Text.svg";
+import { ReactComponent as WebWeaverLine } from "../../../assets/SVG/WebWeaver-Line.svg";
 
 
 
@@ -69,7 +71,7 @@ export const LogoContainer = styled(Link)`
   ${"" /* background: rgba(125, 126, 127, 0.15); */}
          margin-left: 30px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   
@@ -117,11 +119,30 @@ export const Logo = styled.img`
 `;
 
 export const LogoSVG = styled(WebWeaverLogo)`
-  width: 150px;
-  height: 150px;
+  width: 60px;
+  height: 60px;
   fill: #eb5e28;
 `;
-export const OptionsContainer = styled.div`
+
+export const LogoText = styled(WebWeaverText)`
+  width: 120px;
+  height: 60px;
+   fill: #003153; 
+  ${'' /* fill: #094E7C; */}
+  margin-left: 10px;
+`;
+
+export const LogoLine = styled(WebWeaverLine)`
+  ${'' /* width: 120px; */}
+  width: 10px;
+  height: 30px;
+   fill: #003153; 
+  ${'' /* fill: #094E7C; */}
+  margin-left: 10px;
+`;
+
+
+export const MenuButtonsContainer = styled.div`
          & > * {
            &::before,
            &::after {
@@ -203,7 +224,7 @@ export const PrussianBlue_Orange = styled.span.attrs((props) => ({
          transition: inherit;
        `;
 
-export const OptionLink = styled(Link)`
+export const MenuButton = styled(Link)`
  ${
    "" /* NOTE: Different styles for using Theme,localProps and variables to scale infinitely. */
  }
@@ -435,4 +456,4 @@ transition: box-shadow 0.25s cubic-bezier(.98,.13,.96,.34) 0.75s,
          }
        `;
 
-OptionLink.displayName = "OptionLink";
+MenuButton.displayName = "OptionLink";

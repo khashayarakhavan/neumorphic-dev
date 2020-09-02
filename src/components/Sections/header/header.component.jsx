@@ -20,12 +20,13 @@ import {
   Logo,
   LogoCard,
   LogoSVG,
+  LogoLine,
+  LogoText,
   Span,
   PrussianBlue_Orange,
   White_Orange,
-
-
-  OptionLink, OptionsContainer
+  MenuButton,
+  MenuButtonsContainer
 } from './header.styles';
 
 export const Header = (props) => {
@@ -36,6 +37,9 @@ export const Header = (props) => {
         {/* <LogoCard> */}
           {/* <Logo src={homeLogo} /> */}
           <LogoSVG />
+          <LogoLine />
+          <LogoText />
+          {/* <LogoSVG /> */}
         {/* </LogoCard> */}
       </LogoContainer>
       {/* <Button kind="warning" onClick={toggleDarkMode}>
@@ -50,8 +54,8 @@ export const Header = (props) => {
            >
              Toggle Size
            </Button> */}
-      <OptionsContainer>
-        <OptionLink variant="active" to="/hire">
+      <MenuButtonsContainer>
+        <MenuButton variant="active" to="/hire">
           {/* <White_Orange></White_Orange>
           <Span>hire</Span>
           <White_Orange>Me</White_Orange> */}
@@ -59,13 +63,13 @@ export const Header = (props) => {
           {/* <Span>ire</Span> */}
           {/* <Span>Me</Span> */}
           <Span> </Span>
-        </OptionLink>
-        <OptionLink  to="/aboutMe">
+        </MenuButton>
+        <MenuButton  to="/aboutMe">
           /about<PrussianBlue_Orange>Me</PrussianBlue_Orange>
-        </OptionLink>
-        <OptionLink to="/myWorks">
+        </MenuButton>
+        <MenuButton to="/myWorks">
           /my<PrussianBlue_Orange>Works</PrussianBlue_Orange>
-        </OptionLink>
+        </MenuButton>
         {/* {currentUser ? ( // ternary operator to check if currentUser is valid. which means the user is signed-in.
                // then load sign-out button. if there isn't load sign-in button.
                <OptionLink as="div" onClick={signOutStart}>
@@ -77,7 +81,7 @@ export const Header = (props) => {
 
         {/* <CartIcon /> */}
         {/* <SearchBox /> */}
-      </OptionsContainer>
+      </MenuButtonsContainer>
       {hidden ? null : <CartDropdown />}
     </HeaderContainer>
   );};
