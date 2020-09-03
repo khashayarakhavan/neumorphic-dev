@@ -15,14 +15,70 @@ export const TeaOrCoffee = styled.a`
        `;
 export const HeroHeader = styled.header`
     display: grid;
-  grid-template-columns: 1fr 1fr;
+
+  grid-template-columns: 1fr minmax(500px, 1fr);
+  max-width: 100%;
+    overflow: hidden !important;
+    box-sizing: border-box;
+    padding: 0px 50px 20px 50px !important;
          }
        `;
 
        export const HeroHeaderLeft = styled.div`
-    margin: 60px;
-    margin-top: 100px;
-    padding-left: 10px;
+    ${'' /* margin: 60px; */}
+    padding-top: 100px;
+    padding-left: 50px;
+         }
+       `;
+       export const OnHover_Pink = styled.div`
+    ${"" /* margin: 60px; */}
+    width: 60px;
+    height: 50px;
+    display: inline-flex;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+    &:hover {
+    background-color: #ffd7d5;
+    }
+    ${"" /* position: abosolute; */}
+    z-index: -1;
+    
+         }
+       `;
+       export const OnHover_Pink2 = styled.div`
+    ${"" /* margin: 60px; */}
+    width: 60px;
+    height: 50px;
+    display: inline-flex;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+    &:hover {
+    background-color: #f0efeb;
+    }
+    ${"" /* position: abosolute; */}
+    z-index: -1;
+    
+         }
+       `;
+       export const OnHover_Green = styled.div`
+    ${"" /* margin: 60px; */}
+    width: 60px;
+    height: 50px;
+    display: inline-flex;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+    &:hover {
+    background-color: #dbe7e4;
+    }
+    ${"" /* position: abosolute; */}
+    z-index: -1;
+    
          }
        `;
 

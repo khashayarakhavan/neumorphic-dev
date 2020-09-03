@@ -191,8 +191,20 @@ export const White_Orange = styled.span`
        `;
 
 export const Orange_White = styled.span`
-         color: ${colors.CTA.light};
-         color: #E5E5E5;
+  color: #eb5e28;
+  
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+
+  &:hover {
+    color: #f8f8f9;
+  }
+`;
+
+export const Accent_mateBlue = styled.span`
+         
+         
          color: #456078;
          font-family: inherit;
          font-size: inherit;
@@ -202,6 +214,8 @@ export const Orange_White = styled.span`
            color: #f8f8f9;
          }
        `;
+
+
 
 export const LightBlue_DarkBlue = styled.span`
   color: #003153;

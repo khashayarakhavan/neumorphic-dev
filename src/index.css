@@ -20,10 +20,7 @@ code {
  /* background: linear-gradient(-345deg, rgba(240,240,243,.491), rgba(209,217,230,.91)), #eb5e28  !important; */
  /* background-color: red !important; */
  /* width: 1280px; */
-    max-width: 100%;
-    overflow: hidden;
-    box-sizing: border-box;
-    margin: 0px 50px 20px 50px !important;
+    
     /* margin-left: 200px; */
     /* padding: 400px !important; */
 }

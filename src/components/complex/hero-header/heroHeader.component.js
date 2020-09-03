@@ -1,9 +1,9 @@
 import React from 'react';
 import logo from '../../../assets/icon/logo.png';
-import {Orange_White, LightBlue_DarkBlue} from '../../Sections/header/header.styles';
+import {Orange_White, LightBlue_DarkBlue, Accent_mateBlue} from '../../Sections/header/header.styles';
 import Lottie from "react-lottie";
 import * as buildProduct from "../../complex/loading/buildProduct";
-import { TeaOrCoffee, Button, TEXT, H1, HeroHeader ,HeroHeaderLeft } from "./heroHeader.styles";
+import { TeaOrCoffee, Button, TEXT, H1, HeroHeader ,HeroHeaderLeft, OnHover_Pink, OnHover_Pink2, OnHover_Green } from "./heroHeader.styles";
 
 
 const Template = () => {
@@ -25,15 +25,19 @@ const Template = () => {
           <H1 className="heading-primary--main:NOT">
             Hi
             <Orange_White>.</Orange_White>
-            <br />I
-            <Orange_White>’</Orange_White>m
+            <br />I<Accent_mateBlue>’</Accent_mateBlue>m
             <Orange_White>K</Orange_White>ash
           </H1>
           <TEXT className="heading-primary--sub:NOT TEXT:NOT">
-            I'm a web designer developer based in Vancouver and I have a passion
-            for creation.
+            I'm a web developer and I love&nbsp;
+            <OnHover_Pink>coding</OnHover_Pink>,
+            <OnHover_Pink2>science</OnHover_Pink2> &
+            <OnHover_Green>French</OnHover_Green>language!
           </TEXT>
-          <Button>tea or coffee ? ☕</Button>
+          <Button>
+            Pleased to meet you 😊 <br />
+            <span>tea or coffee ? </span>
+          </Button>
         </HeroHeaderLeft>
         <Lottie options={defaultOptions2} height={440} width={440} />
       </HeroHeader>
