@@ -192,6 +192,8 @@ export const White_Orange = styled.span`
 
 export const Orange_White = styled.span`
          color: ${colors.CTA.light};
+         color: #E5E5E5;
+         color: #456078;
          font-family: inherit;
          font-size: inherit;
          font-weight: inherit;

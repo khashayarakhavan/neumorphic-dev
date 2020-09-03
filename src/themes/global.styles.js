@@ -8,7 +8,12 @@ import { fontSize } from "./sizes/index";
 const GlobalStyle = createGlobalStyle`
 	body {
 		${"" /* margin: 0px auto; */}
-		
+		${
+      "" /* background: linear-gradient(-45deg, rgba(240,240,243,1), rgba(209,217,230,.61))   !important;  */
+    }
+		background: linear-gradient(45deg,  rgb(242, 243, 247) , rgba(229, 229, 229, 0.1) )   !important;  
+		${'' /* background: linear-gradient(-95deg,  rgb(242, 243, 247) , rgba(209,217,230,.261) )   !important;   */}
+		 ${"" /* background: #E5E5E5 !important; */}
 		font-family: 'Open Sans Condensed';
 		${"" /* padding: 0px 40px; */}
 		${
