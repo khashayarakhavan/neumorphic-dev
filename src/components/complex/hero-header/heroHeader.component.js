@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from '../../../assets/icon/logo.png';
-import {Orange_White, LightBlue_DarkBlue, Accent_mateBlue} from '../../Sections/header/header.styles';
+import {Orange_White, Accent_fireOrange ,LightBlue_DarkBlue, Accent_mateBlue} from '../../Sections/header/header.styles';
 import Lottie from "react-lottie";
 import * as buildProduct from "../../complex/loading/buildProduct";
 import { TeaOrCoffee, Button, TEXT, H1, HeroHeader ,HeroHeaderLeft, OnHover_palePink, OnHover_paleYellow, OnHover_Green } from "./heroHeader.styles";
@@ -24,9 +24,9 @@ const Template = () => {
         <HeroHeaderLeft className="header__text-box">
           <H1 className="heading-primary--main:NOT">
             Hi
-            <Orange_White>.</Orange_White>
+            <Accent_fireOrange>.</Accent_fireOrange>
             <br />I<Accent_mateBlue>’</Accent_mateBlue>m
-            <Orange_White>K</Orange_White>ash
+            <Accent_fireOrange>K</Accent_fireOrange>ash
           </H1>
           <TEXT className="heading-primary--sub:NOT TEXT:NOT">
             I'm a web developer and I love&nbsp;

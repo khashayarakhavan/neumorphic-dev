@@ -210,10 +210,12 @@ export const Accent_mateBlue = styled.span`
          font-size: inherit;
          font-weight: inherit;
 
-         &:hover {
-           color: #f8f8f9;
-         }
+         
        `;
+
+export const Accent_fireOrange = styled.span`
+  color: #eb5e28;
+`;
 
 
 
