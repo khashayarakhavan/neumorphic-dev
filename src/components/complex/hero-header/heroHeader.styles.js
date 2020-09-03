@@ -1,4 +1,16 @@
-import styled from "styled-components";
+import styled, { keyframes} from "styled-components";
+import colors from '../../../themes/colors';
+
+const background_change = (backColor) => keyframes`
+  0% {
+    background-color: ${backColor}
+  }
+
+  100% {
+   background-color: none;
+  }
+`;
+
 
 export const TeaOrCoffee = styled.a`
          font-family: 'Montserrat', sans-serif !important;
@@ -30,7 +42,7 @@ export const HeroHeader = styled.header`
     padding-left: 50px;
          }
        `;
-       export const OnHover_Pink = styled.div`
+       export const OnHover_palePink = styled.div`
     ${"" /* margin: 60px; */}
     width: 60px;
     height: 50px;
@@ -40,31 +52,35 @@ export const HeroHeader = styled.header`
     justify-items: center;
     justify-content: center;
     &:hover {
-    background-color: #ffd7d5;
+    background-color: ${colors.palePink};
     }
+    animation: ${background_change(colors.palePink)} 2s  1s;
     ${"" /* position: abosolute; */}
     z-index: -1;
     
          }
        `;
-       export const OnHover_Pink2 = styled.div`
-    ${"" /* margin: 60px; */}
-    width: 60px;
-    height: 50px;
-    display: inline-flex;
-    align-items: center;
-    align-content: center;
-    justify-items: center;
-    justify-content: center;
-    &:hover {
-    background-color: #f0efeb;
-    }
-    ${"" /* position: abosolute; */}
-    z-index: -1;
+
+export const OnHover_paleYellow = styled.div`
     
-         }
-       `;
-       export const OnHover_Green = styled.div`
+    width: 60px;
+    height: 50px;
+    display: inline-flex;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+
+    &:hover {
+    background-color: ${colors.paleYellow};
+    }
+    animation: ${background_change(colors.paleYellow)} 2s  2.5s;
+`;
+
+
+
+
+export const OnHover_Green = styled.div`
     ${"" /* margin: 60px; */}
     width: 60px;
     height: 50px;
@@ -74,8 +90,10 @@ export const HeroHeader = styled.header`
     justify-items: center;
     justify-content: center;
     &:hover {
-    background-color: #dbe7e4;
+    background-color: ${colors.paleBlue};
+    
     }
+    animation: ${background_change(colors.paleBlue)} 2s  3.5s ;
     ${"" /* position: abosolute; */}
     z-index: -1;
     

@@ -3,7 +3,7 @@ import logo from '../../../assets/icon/logo.png';
 import {Orange_White, LightBlue_DarkBlue, Accent_mateBlue} from '../../Sections/header/header.styles';
 import Lottie from "react-lottie";
 import * as buildProduct from "../../complex/loading/buildProduct";
-import { TeaOrCoffee, Button, TEXT, H1, HeroHeader ,HeroHeaderLeft, OnHover_Pink, OnHover_Pink2, OnHover_Green } from "./heroHeader.styles";
+import { TeaOrCoffee, Button, TEXT, H1, HeroHeader ,HeroHeaderLeft, OnHover_palePink, OnHover_paleYellow, OnHover_Green } from "./heroHeader.styles";
 
 
 const Template = () => {
@@ -30,8 +30,8 @@ const Template = () => {
           </H1>
           <TEXT className="heading-primary--sub:NOT TEXT:NOT">
             I'm a web developer and I love&nbsp;
-            <OnHover_Pink>coding</OnHover_Pink>,
-            <OnHover_Pink2>science</OnHover_Pink2> &
+            <OnHover_palePink>coding</OnHover_palePink>,
+            <OnHover_paleYellow>science</OnHover_paleYellow> &
             <OnHover_Green>French</OnHover_Green>language!
           </TEXT>
           <Button>

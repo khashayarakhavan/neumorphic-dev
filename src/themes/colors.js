@@ -23,6 +23,10 @@ export default {
   white: "#fff",
   primary: "black",
   black: "black",
+  palePink: "#fde2e4",
+  paleYellow: "#fff1e6",
+  paleGreen: " #dbe7e4",
+  paleBlue: "#d6e2e9",
 
   grayLighter: "#D8D8D8",
   grayLight: "#ccc",
