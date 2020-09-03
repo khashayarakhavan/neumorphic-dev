@@ -23,24 +23,19 @@ const Template = () => {
         </div> */}
         <HeroHeaderLeft className="header__text-box">
           <H1 className="heading-primary--main:NOT">
-            Hi<LightBlue_DarkBlue>.</LightBlue_DarkBlue>
-            <br></br>I<Orange_White>’</Orange_White>m
-            <Orange_White>K</Orange_White>ash
+            Hi.<br />
+            I
+            <Orange_White>’</Orange_White>
+            m
+            <Orange_White>K</Orange_White>
+            ash
           </H1>
-          <br></br>
           <TEXT className="heading-primary--sub:NOT TEXT:NOT">
             I'm a web designer developer based in Vancouver and I have a passion
             for creation.
           </TEXT>
-
-          {/* <p className="TEXT heading-primary:NOT">So nice to meet you. 😊</p>
-           */}
           <Button>
-            {/* <TeaOrCoffee
-              href="#section-tours"
-              className=" btn btn--white btn--animated TEXT"
-            > */}
-            tea or coffee ? ☕{/* </TeaOrCoffee> */}
+            tea or coffee ? ☕
           </Button>
         </HeroHeaderLeft>
         <Lottie options={defaultOptions2} height={440} width={440} />

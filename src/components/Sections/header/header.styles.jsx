@@ -9,9 +9,9 @@ import { ReactComponent as WebWeaverLine } from "../../../assets/SVG/WebWeaver-L
 
 
 
-
 // ATTENTION!: this is an example of using attributes to improve our development process.
 // by defining very specific static or dynamic props to our CSS.
+
 const Constant = styled.div.attrs((props) => ({
   localShadow: "grey", // we can define static props.
   size: props.size || "1em",
@@ -21,7 +21,9 @@ const Constant = styled.div.attrs((props) => ({
   border: 2px solid palevioletred;
   border-radius: 3px;
   color: ${(props) => props.foreground};
-  /* here we use the dynamically computed prop */
+  /* 
+  * here we use the dynamically computed prop 
+  */
   margin: ${(props) => props.size} ;
   padding: ${(props) => props.size} ;
 `; 
@@ -104,6 +106,7 @@ export const LogoCard = styled.div`
 
          box-shadow: inset 3px 3px 8px 2px rgba(125, 126, 127, 0.35),
            inset -3px -3px 12px 2px rgba(255, 255, 255, 0.93);
+          box-shadow: var(--shadow-dark);
        `;
 
 export const Logo = styled.img`
@@ -114,6 +117,7 @@ export const Logo = styled.img`
   ${"" /* filter: brightness(95%) sepia(60%); */}
   box-shadow: 2px 2px 8px 2px rgba(125, 126, 127, 0.52),
            -3px -3px 8px 2px rgba(255, 255, 255, 0.63);
+  box-shadow: var(--shadow-dark);
   ${"" /* background: rgba(125, 205, 255, 100%); */}
   ${"" /* background-color: red; */}
 `;
@@ -133,11 +137,11 @@ export const LogoText = styled(WebWeaverText)`
 `;
 
 export const LogoLine = styled(WebWeaverLine)`
-  ${'' /* width: 120px; */}
+  ${"" /* width: 120px; */}
   width: 10px;
   height: 30px;
-   fill: #003153; 
-  ${'' /* fill: #094E7C; */}
+  ${"" /* fill: var(--props-color-HAF);  */}
+  fill: #003153;
   margin-left: 10px;
 `;
 
@@ -187,7 +191,7 @@ export const White_Orange = styled.span`
        `;
 
 export const Orange_White = styled.span`
-         color: #eb5e28;
+         color: ${colors.CTA.light};
          font-family: inherit;
          font-size: inherit;
          font-weight: inherit;
