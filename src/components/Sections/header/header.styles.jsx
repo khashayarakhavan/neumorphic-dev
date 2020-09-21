@@ -33,7 +33,7 @@ const Constant = styled.div.attrs((props) => ({
 // import { Headerbackground } from "../../themes/mode/index";
 
 export const HeaderContainer = styled.div`
-  height: 10rem;
+  height: 10vh;
   width: 100%;
   display: flex;
   align-items: center;

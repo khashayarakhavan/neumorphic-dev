@@ -31,8 +31,10 @@ export const TeaOrCoffee = styled.a`
     margin-block-end: 30px !important;
          }
        `;
+
 export const HeroHeader = styled.header`
     display: grid;
+height: 90vh;
 
   grid-template-columns: 1fr minmax(500px, 1fr);
   max-width: 100%;
@@ -42,13 +44,13 @@ export const HeroHeader = styled.header`
          }
        `;
 
-       export const HeroHeaderLeft = styled.div`
+export const HeroHeaderLeft = styled.div`
     ${'' /* margin: 60px; */}
     padding-top: 100px;
     padding-left: 50px;
          }
        `;
-       export const OnHover_palePink = styled.div`
+export const OnHover_palePink = styled.div`
     ${"" /* margin: 60px; */}
     width: 60px;
     height: 50px;
@@ -109,10 +111,12 @@ export const TEXT = styled.span`
 // this is a CSS comment inside styled components
  color: #094e7c;
  display:block;
-    ${'' /* font-family: 'Julius Sans One', sans-serif; */}
+    ${"" /* font-family: 'Julius Sans One', sans-serif; */}
     font-family: 'Montserrat', sans-serif !important;
+    ${'' /* font-family: 'Roboto', sans-serif; */}
+    font-weight: 300;
     font-size: 16px !important;
-    font-weight: 400 !important;
+    ${'' /* font-weight: 400 !important; */}
     line-height: 30px !important;
     margin-left: 5px;
     margin-top: 60px !important;
@@ -128,8 +132,10 @@ export const TEXT = styled.span`
 
 export const H1 = styled.span`
  ${"" /* font-family: 'Lora', serif !important; */}
-     font-family: 'Montserrat', sans-serif !important; 
-     ${'' /* font-family: 'Transat-Bold',serif; */}
+     ${'' /* font-family: 'Montserrat', sans-serif !important;  */}
+     font-family: 'Paytone One', sans-serif;
+      ${"" /* font-family: 'Roboto', sans-serif; */}
+     ${"" /* font-family: 'Transat-Bold',serif; */}
      ${"" /* color: #F8F8F9; */}
        color: #094e7c; 
       ${"" /* color: #094e7c; */}
