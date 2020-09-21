@@ -38,7 +38,8 @@ export const Header = (props) => {
           {/* <Logo src={homeLogo} /> */}
           <LogoSVG />
           <LogoLine />
-          <LogoText />
+          <LogoText as="p">vegeloper</LogoText>
+          {/* <LogoText /> */}
           {/* <LogoSVG /> */}
         {/* </LogoCard> */}
       </LogoContainer>
@@ -59,7 +60,7 @@ export const Header = (props) => {
           {/* <White_Orange></White_Orange>
           <Span>hire</Span>
           <White_Orange>Me</White_Orange> */}
-          /hire<PrussianBlue_Orange>Me</PrussianBlue_Orange>
+          /say<PrussianBlue_Orange>Hi</PrussianBlue_Orange>
           {/* <Span>ire</Span> */}
           {/* <Span>Me</Span> */}
           <Span> </Span>

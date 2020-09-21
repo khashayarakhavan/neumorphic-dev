@@ -4,6 +4,7 @@ import colors from "../../../themes/colors";
 import { ColorsThemeFelal } from "../../../themes/colors";
 import { ThemeFelal } from "../../../themes/themes";
 import { ReactComponent as WebWeaverLogo } from "../../../assets/SVG/WebWeaver-Clue.svg";
+import { ReactComponent as VegeloperLogo } from "../../../assets/SVG/Vegeloper.svg";
 import { ReactComponent as WebWeaverText } from "../../../assets/SVG/WebWeaver-Text.svg";
 import { ReactComponent as WebWeaverLine } from "../../../assets/SVG/WebWeaver-Line.svg";
 
@@ -122,17 +123,52 @@ export const Logo = styled.img`
   ${"" /* background-color: red; */}
 `;
 
-export const LogoSVG = styled(WebWeaverLogo)`
+export const LogoSVG = styled(VegeloperLogo)`
   width: 60px;
   height: 60px;
   fill: #eb5e28;
 `;
 
+
 export const LogoText = styled(WebWeaverText)`
-  width: 120px;
-  height: 60px;
-   fill: #003153; 
-  ${'' /* fill: #094E7C; */}
+  ${"" /* width: 120px;
+  height: 60px; */}
+  fill: #003153;
+  color: #003153;
+  font-family: "Viga", sans-serif;
+  font-family: "VT323", monospace;
+  font-family: "Rubik Mono One", sans-serif; // rubik
+  font-family: "Philosopher", sans-serif;
+  font-family: "Paytone One", sans-serif;
+  font-family: "Julius Sans One", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
+  font-family: "Fira Sans Extra Condensed", sans-serif; // fira
+  font-family: "Chakra Petch", sans-serif;
+  font-family: "Allerta Stencil", sans-serif; //Allerta
+  font-family: "Major Mono Display", monospace;
+  font-family: "Anton", sans-serif;
+  font-family: "Fredericka the Great", cursive;
+  font-family: 'Barrio', cursive;
+  font-family: 'Barriecito', cursive;
+  font-size: 3.2rem;
+  font-weight: 400;
+  animation: neon:NOT 0.8s cubic-bezier(0.98, 0.13, 0.96, 0.34) infinite;
+  @keyframes neon {
+    0% {
+      color: #6eeb83;
+    }
+    30% {
+      color: #149911;
+    }
+    70% {
+      color: #a3f7bf;
+    }
+    100% {
+      color: #6eeb83;
+    }
+  }
+
+  ${"" /* fill: #094E7C; */}
   margin-left: 10px;
 `;
 
@@ -143,6 +179,7 @@ export const LogoLine = styled(WebWeaverLine)`
   ${"" /* fill: var(--props-color-HAF);  */}
   fill: #003153;
   margin-left: 10px;
+  margin-top: -5px;
 `;
 
 

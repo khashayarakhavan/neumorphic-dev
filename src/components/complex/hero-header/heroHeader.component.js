@@ -30,7 +30,7 @@ const Template = () => {
           </H1>
           <TEXT className="heading-primary--sub:NOT TEXT:NOT">
             I'm a web developer and I love&nbsp;
-            <OnHover_palePink>coding</OnHover_palePink>,
+            <OnHover_palePink>coding</OnHover_palePink>,&nbsp;
             <OnHover_paleYellow>science</OnHover_paleYellow> &
             <OnHover_Green>French</OnHover_Green>language!
           </TEXT>

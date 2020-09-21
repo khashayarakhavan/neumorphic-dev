@@ -1,18 +1,46 @@
 
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle , injectGlobal} from 'styled-components';
+
 import { selectDarkMode } from "../redux/themes/themes.selectors";
 import { fontSize } from "./sizes/index";
 
 const GlobalStyle = createGlobalStyle`
+
+ @font-face {
+    font-family: "Transat-Bold";
+    src: url("Fonts/Transat/Bold/transat_bold-webfont.woff") format('woff'),
+	url("Fonts/Transat/Bold/transat_bold-webfont.woff2") format('woff2');
+  }
+
+${'' /* @font-face {
+  font-family: "linea-basic-10";
+  src:url("fonts/linea-basic-10.eot");
+  src:url("fonts/linea-basic-10.eot?#iefix") format("embedded-opentype"),
+    url("fonts/linea-basic-10.woff") format("woff"),
+    url("fonts/linea-basic-10.ttf") format("truetype"),
+    url("fonts/linea-basic-10.svg#linea-basic-10") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+} */}
+
+ @font-face {
+    font-family: "Transat-Light";
+     src: url("Fonts/Transat/Light/transat_light-webfont.woff") format('woff'),
+	url("Fonts/Transat/Light/transat_light-webfont.woff2") format('woff2');
+  }
+
 	body {
 		${"" /* margin: 0px auto; */}
 		${
       "" /* background: linear-gradient(-45deg, rgba(240,240,243,1), rgba(209,217,230,.61))   !important;  */
     }
 		background: linear-gradient(45deg,  rgb(242, 243, 247) , rgba(229, 229, 229, 0.1) )   !important;  
-		${'' /* background: linear-gradient(-95deg,  rgb(242, 243, 247) , rgba(209,217,230,.261) )   !important;   */}
+		${
+      "" /* background: linear-gradient(-95deg,  rgb(242, 243, 247) , rgba(209,217,230,.261) )   !important;   */
+    }
 		 ${"" /* background: #E5E5E5 !important; */}
 		font-family: 'Open Sans Condensed';
 		${"" /* padding: 0px 40px; */}
@@ -33,6 +61,7 @@ const GlobalStyle = createGlobalStyle`
 			${"" /* padding: 10px; */}
 		}
 	}
+
 
 	:root {
 		--props-color-HAF: #145665 ;
@@ -95,6 +124,7 @@ $color-grey-dark-3: #333;
 		
 	}
 `;
+
 
 const mapStateToProps = createStructuredSelector({
   darkMode: selectDarkMode,

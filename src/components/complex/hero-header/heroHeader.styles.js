@@ -3,7 +3,13 @@ import colors from '../../../themes/colors';
 
 const background_change = (backColor) => keyframes`
   0% {
-    background-color: ${backColor}
+    background-color: ${backColor};
+    opacity: 0%;
+  }
+
+  50% {
+    background-color: ${backColor};
+    opacity: 100%;
   }
 
   100% {
@@ -54,7 +60,7 @@ export const HeroHeader = styled.header`
     &:hover {
     background-color: ${colors.palePink};
     }
-    animation: ${background_change(colors.palePink)} 2s  1s;
+    animation: ${background_change(colors.palePink)} 3s  2s ;
     ${"" /* position: abosolute; */}
     z-index: -1;
     
@@ -62,19 +68,18 @@ export const HeroHeader = styled.header`
        `;
 
 export const OnHover_paleYellow = styled.div`
-    
-    width: 60px;
-    height: 50px;
-    display: inline-flex;
-    align-items: center;
-    align-content: center;
-    justify-items: center;
-    justify-content: center;
+  width: 60px;
+  height: 50px;
+  display: inline-flex;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
 
-    &:hover {
+  &:hover {
     background-color: ${colors.paleYellow};
-    }
-    animation: ${background_change(colors.paleYellow)} 2s  2.5s;
+  }
+  animation: ${background_change(colors.paleYellow)} 3s 3.5s ;
 `;
 
 
@@ -93,7 +98,7 @@ export const OnHover_Green = styled.div`
     background-color: ${colors.paleBlue};
     
     }
-    animation: ${background_change(colors.paleBlue)} 2s  3.5s ;
+    animation: ${background_change(colors.paleBlue)} 3s  5s  ;
     ${"" /* position: abosolute; */}
     z-index: -1;
     
@@ -104,6 +109,7 @@ export const TEXT = styled.span`
 // this is a CSS comment inside styled components
  color: #094e7c;
  display:block;
+    ${'' /* font-family: 'Julius Sans One', sans-serif; */}
     font-family: 'Montserrat', sans-serif !important;
     font-size: 16px !important;
     font-weight: 400 !important;
@@ -111,18 +117,22 @@ export const TEXT = styled.span`
     margin-left: 5px;
     margin-top: 60px !important;
     margin-bottom: 30px !important;
-    ${'' /* margin-right: 30px !important; */}
-    ${'' /* margin-left: 30px !important; */}
-    ${'' /* margin-block-start: 30px !important; */}
-    ${'' /* margin-block-end: 30px !important; */}
+    ${"" /* margin-right: 30px !important; */}
+    ${"" /* margin-left: 30px !important; */}
+    ${"" /* margin-block-start: 30px !important; */}
+    ${"" /* margin-block-end: 30px !important; */}
          }
        `;
+
+
+
 export const H1 = styled.span`
  ${"" /* font-family: 'Lora', serif !important; */}
-     font-family: 'Montserrat', sans-serif !important;
+     font-family: 'Montserrat', sans-serif !important; 
+     ${'' /* font-family: 'Transat-Bold',serif; */}
      ${"" /* color: #F8F8F9; */}
        color: #094e7c; 
-      ${'' /* color: #094e7c; */}
+      ${"" /* color: #094e7c; */}
     font-size: 95px !important;
     font-weight: 800 !important;
     line-height: 60px !important;
