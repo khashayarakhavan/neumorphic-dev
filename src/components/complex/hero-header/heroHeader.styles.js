@@ -109,14 +109,17 @@ export const OnHover_Green = styled.div`
 
 export const TEXT = styled.span`
 // this is a CSS comment inside styled components
+ font-family: 'Nunito', sans-serif;
+    font-weight: 400;
  color: #094e7c;
  display:block;
     ${"" /* font-family: 'Julius Sans One', sans-serif; */}
-    font-family: 'Montserrat', sans-serif !important;
-    ${'' /* font-family: 'Roboto', sans-serif; */}
-    font-weight: 300;
-    font-size: 16px !important;
-    ${'' /* font-weight: 400 !important; */}
+    ${"" /* font-family: 'Montserrat', sans-serif !important; */}
+   
+${"" /* font-family: 'Open Sans', sans-serif; */}
+    ${"" /* font-family: 'Roboto', sans-serif; */}
+    font-size: 20px !important;
+    ${"" /* font-weight: 400 !important; */}
     line-height: 30px !important;
     margin-left: 5px;
     margin-top: 60px !important;
@@ -131,17 +134,39 @@ export const TEXT = styled.span`
 
 
 export const H1 = styled.span`
+ font-family: 'Barriecito', cursive;
+ font-family: 'Do Hyeon', sans-serif;
+ font-family: 'Righteous', cursive;
+ font-family: 'open sans', sans-serif;
+ 
+ font-family: 'Josefin Sans', sans-serif;
+ font-family: 'Lato', sans-serif;
+ font-family: 'Major Mono Display', monospace; // special:400
+ font-family: 'Helvetica-Bold'; // nunito :400&900
+ font-family: 'Roboto', sans-serif; // not bad bold: 900
+ font-family: 'Merriweather Sans', sans-serif; // curvy apostrophe:800 
+ font-family: 'Nunito', sans-serif; // nunito :400&900
+ font-family: 'Open Sans', sans-serif; // heavy bold:800
+ font-family: 'Poppins', sans-serif; // clean type: 400&900
+ font-family: 'Rubik Mono One', sans-serif; // rubik monoSpace:400
+    font-weight: 400 !important; 
+    font-size: 75px !important;
+    line-height: 80px !important;
+    ${"" /* line-height: 1.5rem; */}
  ${"" /* font-family: 'Lora', serif !important; */}
-     ${'' /* font-family: 'Montserrat', sans-serif !important;  */}
-     font-family: 'Paytone One', sans-serif;
+     ${"" /* font-family: 'Montserrat', sans-serif !important;  */}
+     ${
+       "" /* font-family: 'Paytone One', sans-serif;
+     font-family: 'Nunito', sans-serif;
+font-family: 'Open Sans', sans-serif; */
+     }
+${"" /* font-family: 'Nunito', sans-serif; */}
+
       ${"" /* font-family: 'Roboto', sans-serif; */}
      ${"" /* font-family: 'Transat-Bold',serif; */}
      ${"" /* color: #F8F8F9; */}
        color: #094e7c; 
       ${"" /* color: #094e7c; */}
-    font-size: 95px !important;
-    font-weight: 800 !important;
-    line-height: 60px !important;
     margin-top: 60px !important;
     margin-bottom: 30px !important;
     ${"" /* margin-right: 30px !important; */}

@@ -13,8 +13,17 @@ const GlobalStyle = createGlobalStyle`
     src: url("Fonts/Transat/Bold/transat_bold-webfont.woff") format('woff'),
 	url("Fonts/Transat/Bold/transat_bold-webfont.woff2") format('woff2');
   }
+ @font-face {
+    font-family: "Helvetica-Bold";
+    src: url("Fonts/Helvetica/Helvetica-Bold.ttf") format('ttf');
+  }
+ @font-face {
+    font-family: "Helvetica";
+    src: url("Fonts/Helvetica/Helvetica.ttf") format('ttf');
+  }
 
-${'' /* @font-face {
+${
+  "" /* @font-face {
   font-family: "linea-basic-10";
   src:url("fonts/linea-basic-10.eot");
   src:url("fonts/linea-basic-10.eot?#iefix") format("embedded-opentype"),
@@ -24,7 +33,8 @@ ${'' /* @font-face {
   font-weight: normal;
   font-style: normal;
 
-} */}
+} */
+}
 
  @font-face {
     font-family: "Transat-Light";
