@@ -1,5 +1,9 @@
 {
   "name": "crwn-clothing",
+  "engines": {
+    "node": ">=10.0",
+    "npm": "6.x.x"
+  },
   "version": "0.1.0",
   "private": true,
   "proxy": "http://localhost:5000",
@@ -49,7 +53,8 @@
     "css:compile": "node-sass src/css/sass/main.scss src/css/compiled/style.compiled.css",
     "css:prefix": "postcss  src/css/compiled/style.compiled.css --use autoprefixer -o src/css/compiled/style.prefix.css",
     "css:compress": "node-sass src/css/compiled/style.prefix.css src/css/compiled/style.compress.css --output-style compressed",
-    "css:build": "npm-run-all css:compile css:prefix css:compress"
+    "css:build": "npm-run-all css:compile css:prefix css:compress",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install && npm run build "
   },
   "eslintConfig": {
     "extends": "react-app"
