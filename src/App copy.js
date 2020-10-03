@@ -11,7 +11,6 @@ import SectionFeatures from './components/Static/sectionFeatures';
 import UpButton from './components/atomic/up-button/up-button.component';
 import MenuNavigation from './components/atomic/menu-navigation/menu-navigation.component';
 import Spinner from './components/spinner/spinner.component';
-import SetTimeOut from './pages/setTimeOut/setTimeOut.component';
 import FirebasePage from "./pages/firebaseDBupload/firebaseDB.components";
 import SingleArticlePage from './pages/singleArticle/singleArticle.component';
 import { selectDarkMode } from "./redux/themes/themes.selectors";
@@ -56,25 +55,31 @@ const App = ({ checkUserSession, currentUser, darkMode }) => {
           <ThemeProvider theme={noChange}>
             <Header darkMode />
           </ThemeProvider>
-          <UpButton />
-          {/* <SectionFeatures /> */}
-          {/* <HeroHeader />  */}
-          <MenuNavigation />
           <Switch>
             <ErrorBoundary>
               <Suspense fallback={<Spinner />}>
-                <Route exact path="/" component={HeroHeader} />
-                <Route path="/articles/:slug" component={SingleArticlePage} />
-                <Route exact path="/hello" component={HomePage} />
+                <Route exact path="/">
+                  <HeroHeader />
+                  {/* <HeroHeader /> */}
+                  <UpButton />
+                  <SectionFeatures />
+                  <HeroHeader />
+                  <MenuNavigation />
+                  {/* <Route path="articles/:slug" component={ArticleList} /> */}
+                  <Route path="/articles/:slug" component={SingleArticlePage} />
+                  <Route exact path="/hello" component={HomePage} />
+                </Route>
+
                 <Route exact path="/landing" component={LandingPage} />
+
                 <Route path="/shop" component={ShopPage} />
-                <Route path="/jquery" component={SetTimeOut} />
                 <Route exact path="/checkout" component={CheckoutPage} />
                 <Route
                   exact
                   path="/firebaseDBUpload"
                   component={FirebasePage}
                 />
+
                 <Route
                   exact
                   path="/signin"
