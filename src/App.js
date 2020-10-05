@@ -17,12 +17,12 @@ import SingleArticlePage from './pages/singleArticle/singleArticle.component';
 import { selectDarkMode } from "./redux/themes/themes.selectors";
 import { checkUserSession } from './redux/user/user.actions';
 import { selectCurrentUser } from './redux/user/user.selectors';
-import GlobalStyle from './themes/global.styles';
+import GlobalStyle from './design/global.styles';
 import {
   invertTheme, noChange,
 
   ThemeLight
-} from "./themes/themes";
+} from "./design/themes";
 const HomePage = lazy(() => import('./pages/homepage/homepage.component'));
 const LandingPage = lazy(() => import('./pages/landingpage/landingpage.component'));
 const ShopPage = lazy(() => import('./pages/shop/shop.component'));

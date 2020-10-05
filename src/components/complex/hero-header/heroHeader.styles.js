@@ -1,5 +1,5 @@
 import styled, { keyframes} from "styled-components";
-import colors from '../../../themes/colors';
+import colors from '../../../design/colors';
 
 const background_change = (backColor) => keyframes`
   0% {

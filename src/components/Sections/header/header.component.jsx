@@ -14,7 +14,7 @@ import { signOutStart } from "../../../redux/user/user.actions";
 //Components
 import CartDropdown from '../../complex/cart-dropdown/cart-dropdown.component';
 //Styles
-import { PrussianBlue_To_Orange } from '../../../themes/effects.styles';
+import { PrussianBlue_To_Orange } from '../../../design/effects.styles';
 import {
   HeaderContainer,
   LogoContainer,

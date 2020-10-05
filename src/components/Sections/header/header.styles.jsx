@@ -1,13 +1,12 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import colors from "../../../themes/colors";
-import { ColorsThemeFelal } from "../../../themes/colors";
-import { ThemeFelal } from "../../../themes/themes";
+import colors from "../../../design/colors";
+
 import { ReactComponent as WebWeaverLogo } from "../../../assets/SVG/WebWeaver-Clue.svg";
 import { ReactComponent as VegeloperLogo } from "../../../assets/SVG/Vegeloper.svg";
 import { ReactComponent as WebWeaverText } from "../../../assets/SVG/WebWeaver-Text.svg";
 import { ReactComponent as WebWeaverLine } from "../../../assets/SVG/WebWeaver-Line.svg";
-import { PrussianBlue_To_Orange } from '../../../themes/effects.styles';
+import { PrussianBlue_To_Orange } from '../../../design/effects.styles';
 
 
 
@@ -30,8 +29,8 @@ const Constant = styled.div.attrs((props) => ({
   padding: ${(props) => props.size} ;
 `; 
 
-// import { background } from "../../themes/variants/buttonColor";
-// import { Headerbackground } from "../../themes/mode/index";
+// import { background } from "../../design/variants/buttonColor";
+// import { Headerbackground } from "../../design/mode/index";
 
 export const HeaderContainer = styled.div`
   height: 10vh;
@@ -238,20 +237,20 @@ export const Orange_White = styled.span`
   }
 `;
 
-export const Accent_mateBlue = styled.span`
+// export const Accent_mateBlue = styled.span`
          
          
-         color: #456078;
-         font-family: inherit;
-         font-size: inherit;
-         font-weight: inherit;
+//          color: #456078;
+//          font-family: inherit;
+//          font-size: inherit;
+//          font-weight: inherit;
 
          
-       `;
+//        `;
 
-export const Accent_fireOrange = styled.span`
-  color: #eb5e28;
-`;
+// export const Accent_fireOrange = styled.span`
+//   color: #eb5e28;
+// `;
 
 
 
