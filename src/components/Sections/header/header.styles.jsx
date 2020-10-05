@@ -7,6 +7,7 @@ import { ReactComponent as WebWeaverLogo } from "../../../assets/SVG/WebWeaver-C
 import { ReactComponent as VegeloperLogo } from "../../../assets/SVG/Vegeloper.svg";
 import { ReactComponent as WebWeaverText } from "../../../assets/SVG/WebWeaver-Text.svg";
 import { ReactComponent as WebWeaverLine } from "../../../assets/SVG/WebWeaver-Line.svg";
+import { PrussianBlue_To_Orange } from '../../../themes/effects.styles';
 
 
 
@@ -130,9 +131,7 @@ export const LogoSVG = styled(VegeloperLogo)`
 `;
 
 
-export const LogoText = styled(WebWeaverText)`
-  ${"" /* width: 120px;
-  height: 60px; */}
+export const LogoText = styled.p`
   fill: #003153;
   color: #003153;
   font-family: "Viga", sans-serif;
@@ -267,26 +266,7 @@ export const LightBlue_DarkBlue = styled.span`
   }
 `;
 
-export const PrussianBlue_Orange = styled.span.attrs((props) => ({
-  type: "text",
-  status: props.theme ? "green" : "black",
-}))`
-         ${"" /* color: #003153; */}
-         ${
-           "" /* color: ${({theme: {foreground}}) => foreground ? foreground : "blue"}; */
-         }
-         ${"" /* color: ${colors.greenLight}; */}
-         font-family: inherit;
-         font-size: inherit;
-
-         font-weight: inherit;
-         transition: inherit;
-       `;
-
 export const MenuButton = styled(Link)`
- ${
-   "" /* NOTE: Different styles for using Theme,localProps and variables to scale infinitely. */
- }
 
 --props-variant-default-background-color: none ;
 --props-variant-active-background-color: #D65524 ;
@@ -510,7 +490,7 @@ transition: box-shadow 0.25s cubic-bezier(.98,.13,.96,.34) 0.75s,
            color: #eb5e28;           
          }
 
-         &:hover ${PrussianBlue_Orange} {
+         &:hover ${PrussianBlue_To_Orange} {
            color: #eb5e28;           
          }
        `;

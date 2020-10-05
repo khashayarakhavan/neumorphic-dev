@@ -1,91 +1,60 @@
+//Basics
 import React from 'react';
+//State
 import { connect } from 'react-redux';
+//Selectors
 import { createStructuredSelector } from 'reselect';
-// import { ReactComponent as Logo } from '../../assets/SVG/star.svg';
-// import homeLogo from '../../assets/icon/logo2.png';
-import homeLogo from '../../../assets/icon/logo2.png';
-// import SearchIcon from '../search-icon/search-icon.component';
-import SearchBox from '../../search-icon/search-icon.component';
-import { toggleCartHidden } from "../../../redux/cart/cart.actions";
 import { selectCartHidden } from '../../../redux/cart/cart.selectors';
-import { toggleDarkMode } from "../../../redux/themes/themes.actions";
 import { selectDarkMode } from "../../../redux/themes/themes.selectors";
-import { signOutStart } from "../../../redux/user/user.actions";
 import { selectCurrentUser } from '../../../redux/user/user.selectors';
-import Button from "../../atomic/button/button.styles";
+//Actions
+import { toggleCartHidden } from "../../../redux/cart/cart.actions";
+import { toggleDarkMode } from "../../../redux/themes/themes.actions";
+import { signOutStart } from "../../../redux/user/user.actions";
+//Components
 import CartDropdown from '../../complex/cart-dropdown/cart-dropdown.component';
+//Styles
+import { PrussianBlue_To_Orange } from '../../../themes/effects.styles';
 import {
   HeaderContainer,
   LogoContainer,
-  Logo,
-  LogoCard,
   LogoSVG,
-  LogoLine,
+  LogoLine,  
   LogoText,
-  Span,
-  PrussianBlue_Orange,
-  White_Orange,
   MenuButton,
   MenuButtonsContainer
 } from './header.styles';
 
+
+//Code
 export const Header = (props) => {
-  const { currentUser, hidden, signOutStart , toggleDarkMode} = props;
+  const { hidden } = props;
+
   return (
     <HeaderContainer id="topMenu">
-      <LogoContainer to="/signin">
-        {/* <LogoCard> */}
-          {/* <Logo src={homeLogo} /> */}
+      <LogoContainer to="/">
           <LogoSVG />
           <LogoLine />
-          <LogoText as="p">vegeloper</LogoText>
-          {/* <LogoText /> */}
-          {/* <LogoSVG /> */}
-        {/* </LogoCard> */}
+          <LogoText>vegeloper</LogoText>
       </LogoContainer>
-      {/* <Button kind="warning" onClick={toggleDarkMode}>
-        Toggle Mode
-      </Button> */}
-      {/* <Button >
-             Default Btn
-           </Button>
-           <Button
-             kind="success"
-             onClick={() => console.log("success clicked :D")}
-           >
-             Toggle Size
-           </Button> */}
       <MenuButtonsContainer>
-        <MenuButton variant="active" to="/hire">
-          {/* <White_Orange></White_Orange>
-          <Span>hire</Span>
-          <White_Orange>Me</White_Orange> */}
-          /say<PrussianBlue_Orange>Hi</PrussianBlue_Orange>
-          {/* <Span>ire</Span> */}
-          {/* <Span>Me</Span> */}
-          <Span> </Span>
+        <MenuButton variant="active" to="/sayHi">         
+          /say
+          <PrussianBlue_To_Orange>Hi</PrussianBlue_To_Orange>
         </MenuButton>
         <MenuButton  to="/aboutMe">
-          /about<PrussianBlue_Orange>Me</PrussianBlue_Orange>
+          /about
+          <PrussianBlue_To_Orange>Me</PrussianBlue_To_Orange>
         </MenuButton>
         <MenuButton to="/myWorks">
-          /my<PrussianBlue_Orange>Works</PrussianBlue_Orange>
+          /my
+          <PrussianBlue_To_Orange>Works</PrussianBlue_To_Orange>
         </MenuButton>
-        {/* {currentUser ? ( // ternary operator to check if currentUser is valid. which means the user is signed-in.
-               // then load sign-out button. if there isn't load sign-in button.
-               <OptionLink as="div" onClick={signOutStart}>
-                 SIGN OUT
-               </OptionLink>
-             ) : (
-               <OptionLink to="/signin">SIGN IN</OptionLink>
-             )} */}
-
-        {/* <CartIcon /> */}
-        {/* <SearchBox /> */}
       </MenuButtonsContainer>
-      {hidden ? null : <CartDropdown />}
+      {hidden ? null : <CartDropdown />} 
     </HeaderContainer>
-  );};
+  );
+};
 
 const mapStateToProps = createStructuredSelector({
   currentUser: selectCurrentUser,
