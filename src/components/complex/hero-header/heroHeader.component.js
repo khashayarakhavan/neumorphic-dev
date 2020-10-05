@@ -19,6 +19,8 @@ import {
   HeroHeaderLeft,
 } from "./heroHeader.styles";
 
+
+//Code
 const HeroHeaderComponent = () => (
   <HeroHeader id="header">
     <HeroHeaderLeft>
@@ -39,7 +41,7 @@ const HeroHeaderComponent = () => (
         <span>tea or coffee ? </span>
       </Button>
     </HeroHeaderLeft>
-    
+
     <Lottie options={AnimationCreateRobot} height={440} width={440} />
   </HeroHeader>
 );
