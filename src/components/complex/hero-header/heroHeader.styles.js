@@ -1,187 +1,52 @@
-import styled, { keyframes} from "styled-components";
-import colors from '../../../design/colors';
+//Libraries
+import styled from "styled-components";
 
-const background_change = (backColor) => keyframes`
-  0% {
-    background-color: ${backColor};
-    opacity: 0%;
-  }
-
-  50% {
-    background-color: ${backColor};
-    opacity: 100%;
-  }
-
-  100% {
-   background-color: none;
-  }
-`;
-
-
-export const TeaOrCoffee = styled.a`
-         font-family: 'Montserrat', sans-serif !important;
-    font-size: 16px !important;
-    font-weight: 400 !important;
-    line-height: 30px !important;
-    margin-top: 60px !important;
-    margin-bottom: 30px !important;
-    margin-right: 30px !important;
-    margin-left: 60px !important;
-    margin-block-start: 30px !important;
-    margin-block-end: 30px !important;
-         }
-       `;
-
-export const HeroHeader = styled.header`
-    display: grid;
-height: 90vh;
-
+//Code
+export const HeroHeaderContainer = styled.header`
+  display: grid;
+  height: 90vh;
   grid-template-columns: 1fr minmax(500px, 1fr);
   max-width: 100%;
-    overflow: hidden !important;
-    box-sizing: border-box;
-    padding: 0px 50px 20px 50px !important;
-         }
-       `;
-
-export const HeroHeaderLeft = styled.div`
-    ${'' /* margin: 60px; */}
-    padding-top: 100px;
-    padding-left: 50px;
-         }
-       `;
-export const OnHover_palePink = styled.div`
-    ${"" /* margin: 60px; */}
-    width: 60px;
-    height: 50px;
-    display: inline-flex;
-    align-items: center;
-    align-content: center;
-    justify-items: center;
-    justify-content: center;
-    &:hover {
-    background-color: ${colors.palePink};
-    }
-    animation: ${background_change(colors.palePink)} 3s  2s ;
-    ${"" /* position: abosolute; */}
-    z-index: -1;
-    
-         }
-       `;
-
-export const OnHover_paleYellow = styled.div`
-  width: 60px;
-  height: 50px;
-  display: inline-flex;
-  align-items: center;
-  align-content: center;
-  justify-items: center;
-  justify-content: center;
-
-  &:hover {
-    background-color: ${colors.paleYellow};
-  }
-  animation: ${background_change(colors.paleYellow)} 3s 3.5s ;
+  overflow: hidden !important;
+  box-sizing: border-box;
+  padding: 0px 50px 20px 50px !important;
 `;
 
-
-
-
-export const OnHover_Green = styled.div`
-    ${"" /* margin: 60px; */}
-    width: 60px;
-    height: 50px;
-    display: inline-flex;
-    align-items: center;
-    align-content: center;
-    justify-items: center;
-    justify-content: center;
-    &:hover {
-    background-color: ${colors.paleBlue};
-    
-    }
-    animation: ${background_change(colors.paleBlue)} 3s  5s  ;
-    ${"" /* position: abosolute; */}
-    z-index: -1;
-    
-         }
-       `;
+export const HeroHeaderLeft = styled.div`
+  padding-top: 100px;
+  padding-left: 50px;
+`;
 
 export const TEXT = styled.span`
-// this is a CSS comment inside styled components
- font-family: 'Nunito', sans-serif;
-    font-weight: 400;
- color: #094e7c;
- display:block;
-    ${"" /* font-family: 'Julius Sans One', sans-serif; */}
-    ${"" /* font-family: 'Montserrat', sans-serif !important; */}
-   
-${"" /* font-family: 'Open Sans', sans-serif; */}
-    ${"" /* font-family: 'Roboto', sans-serif; */}
-    font-size: 20px !important;
-    ${"" /* font-weight: 400 !important; */}
-    line-height: 30px !important;
-    margin-left: 5px;
-    margin-top: 60px !important;
-    margin-bottom: 30px !important;
-    ${"" /* margin-right: 30px !important; */}
-    ${"" /* margin-left: 30px !important; */}
-    ${"" /* margin-block-start: 30px !important; */}
-    ${"" /* margin-block-end: 30px !important; */}
-         }
-       `;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+  color: #094e7c;
+  display:block;
+  font-size: 20px !important;
+  line-height: 30px !important;
+  margin-left: 5px;
+  margin-top: 60px !important;
+  margin-bottom: 30px !important;
+`;
 
 
 
 export const H1 = styled.span`
- font-family: 'Barriecito', cursive;
- font-family: 'Do Hyeon', sans-serif;
- font-family: 'Righteous', cursive;
- font-family: 'open sans', sans-serif;
- 
- font-family: 'Josefin Sans', sans-serif;
- font-family: 'Lato', sans-serif;
- font-family: 'Major Mono Display', monospace; // special:400
- font-family: 'Helvetica-Bold'; // nunito :400&900
- font-family: 'Roboto', sans-serif; // not bad bold: 900
- font-family: 'Merriweather Sans', sans-serif; // curvy apostrophe:800 
- font-family: 'Nunito', sans-serif; // nunito :400&900
- font-family: 'Open Sans', sans-serif; // heavy bold:800
- font-family: 'Poppins', sans-serif; // clean type: 400&900
- font-family: 'Rubik Mono One', sans-serif; // rubik monoSpace:400
-    font-weight: 400 !important; 
-    font-size: 75px !important;
-    line-height: 80px !important;
-    ${"" /* line-height: 1.5rem; */}
- ${"" /* font-family: 'Lora', serif !important; */}
-     ${"" /* font-family: 'Montserrat', sans-serif !important;  */}
-     ${
-       "" /* font-family: 'Paytone One', sans-serif;
-     font-family: 'Nunito', sans-serif;
-font-family: 'Open Sans', sans-serif; */
-     }
-${"" /* font-family: 'Nunito', sans-serif; */}
-
-      ${"" /* font-family: 'Roboto', sans-serif; */}
-     ${"" /* font-family: 'Transat-Bold',serif; */}
-     ${"" /* color: #F8F8F9; */}
-       color: #094e7c; 
-      ${"" /* color: #094e7c; */}
-    margin-top: 60px !important;
-    margin-bottom: 30px !important;
-    ${"" /* margin-right: 30px !important; */}
-    ${"" /* margin-left: 30px !important; */}
-    ${"" /* // margin-block-start: 60px !important; */}
-    margin-block-end: 30px !important;
-         }
-       `;
+  font-family: 'Rubik Mono One', sans-serif; 
+  font-weight: 400 !important; 
+  font-size: 75px !important;
+  line-height: 80px !important;
+  color: #094e7c; 
+  margin-bottom: 30px !important;
+  margin-block-end: 30px !important;
+`;
 
 export const Button = styled.div`
-    align-self: flex-start;
+  align-self: flex-start;
+
   &,
   &:link,
   &:visited {
-
     font-family: "Montserrat", sans-serif !important;
     display: block;
     font-size: 16px !important;
@@ -190,8 +55,6 @@ export const Button = styled.div`
     margin-top: 60px !important;
     margin-bottom: 30px !important;
     margin-right: 30px !important;
-    ${'' /* margin-left: 60px !important; */}
-    ${'' /* margin-block-start: 30px !important; */}
     margin-block-end: 30px !important;
     text-transform: uppercase;
     text-decoration: none;
@@ -204,18 +67,16 @@ export const Button = styled.div`
     border: none;
     cursor: pointer;
     color: #094e7c;
-    ${"" /* background-color: rgba(252, 253, 253, 0.87); */}
-    ${"" /* box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); */}
     box-shadow: 4px 4px 15px 2px rgba(125, 126, 127, 0.42),
            -3px -3px 12px 2px rgba(255, 255, 255, 0.93);
   }
 
   &:hover {
     transform: translateY(-8px);
-    ${"" /* box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); */}
     background-color:  #F8F8F9;
     box-shadow:  4px 4px 15px 2px rgba(125, 126, 127, 0.42),
            -3px -3px 12px 2px rgba(255, 255, 255, 0.93); 
+
   &:hover::after {
     transform: scaleX(1.4) scaleY(1.6);
     opacity: 0;
@@ -226,7 +87,6 @@ export const Button = styled.div`
     background-color: #094e7c;
     color: rgba(252, 253, 253, 0.87);
     transform: translateY(-2px);
-    ${"" /* box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); */}
     box-shadow:  4px 4px 15px 2px rgba(125, 126, 127, 0.42),
            -3px -3px 12px 2px rgba(255, 255, 255, 0.93);
   }

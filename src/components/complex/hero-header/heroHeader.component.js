@@ -15,14 +15,14 @@ import {
   Button,
   TEXT,
   H1,
-  HeroHeader,
+  HeroHeaderContainer,
   HeroHeaderLeft,
 } from "./heroHeader.styles";
 
 
 //Code
 const HeroHeaderComponent = () => (
-  <HeroHeader id="header">
+  <HeroHeaderContainer id="header">
     <HeroHeaderLeft>
       <H1>
         Hi
@@ -43,7 +43,7 @@ const HeroHeaderComponent = () => (
     </HeroHeaderLeft>
 
     <Lottie options={AnimationCreateRobot} height={440} width={440} />
-  </HeroHeader>
+  </HeroHeaderContainer>
 );
 
 export default HeroHeaderComponent;
