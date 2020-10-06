@@ -13,7 +13,7 @@ import { toggleDarkMode } from "../../../redux/themes/themes.actions";
 import { signOutStart } from "../../../redux/user/user.actions";
 //Components
 import CartDropdown from '../../complex/cart-dropdown/cart-dropdown.component';
-//Styles
+//Design
 import { PrussianBlue_To_Orange } from '../../../design/effects.styles';
 import {
   HeaderContainer,

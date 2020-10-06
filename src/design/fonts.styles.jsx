@@ -12,3 +12,20 @@
  font-family: 'Nunito', sans-serif; // nunito :400&900
  font-family: 'Open Sans', sans-serif; // heavy bold:800
  font-family: 'Poppins', sans-serif; // clean type: 400&900
+
+
+ //LogoText font variations
+  font-family: "Viga", sans-serif;
+  font-family: "VT323", monospace;
+  font-family: "Rubik Mono One", sans-serif; // rubik
+  font-family: "Philosopher", sans-serif;
+  font-family: "Paytone One", sans-serif;
+  font-family: "Julius Sans One", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
+  font-family: "Fira Sans Extra Condensed", sans-serif; // fira
+  font-family: "Chakra Petch", sans-serif;
+  font-family: "Allerta Stencil", sans-serif; //Allerta
+  font-family: "Major Mono Display", monospace;
+  font-family: "Anton", sans-serif;
+  font-family: "Fredericka the Great", cursive;
+  font-family: 'Barrio', cursive;

@@ -21,7 +21,7 @@ export default {
     dark: "darkgrey",
   },
   white: "#fff",
-  primary: "black",
+  primary: "#003153",
   black: "black",
   palePink: "#fde2e4",
   paleYellow: "#fff1e6",

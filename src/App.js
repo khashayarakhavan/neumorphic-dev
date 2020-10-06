@@ -18,6 +18,7 @@ import { selectDarkMode } from "./redux/themes/themes.selectors";
 import { checkUserSession } from './redux/user/user.actions';
 import { selectCurrentUser } from './redux/user/user.selectors';
 import GlobalStyle from './design/global.styles';
+import GlobalConstants from './design/constants.styles';
 import {
   invertTheme, noChange,
 
@@ -52,6 +53,7 @@ const App = ({ checkUserSession, currentUser, darkMode }) => {
     <ThemeProvider theme={ThemeLight}>
       <ThemeProvider theme={darkMode ? invertTheme : noChange}>
         <div>
+          <GlobalConstants />
           <GlobalStyle darkMode />
           <ThemeProvider theme={noChange}>
             <Header darkMode />
