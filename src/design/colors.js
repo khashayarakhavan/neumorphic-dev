@@ -20,7 +20,7 @@ export default {
     light: "grey",
     dark: "darkgrey",
   },
-  white: "#fff",
+  white: "rgb(248, 248, 249)",
   primary: "#003153",
   accent: "#D65524",
   black: "black",
@@ -34,8 +34,8 @@ export default {
   grayDark: "#444",
   grayDarker: "#222",
 
-  blueLight: "#2196F3",
-  blueDark: "#104977",
+  blueLight: "rgb(33, 150, 243)",
+  blueDark: "rgb(16, 73, 119)",
 
   greenLight: "#8bc34a",
   greenDark: "#3b5221",

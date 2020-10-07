@@ -20,18 +20,24 @@ export const mix_neumorphic = {
 };
 export const mix_header = {
   basic: (...args) => css`
-      height: 10vh;
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      ${respond.handheld`
-            background-color: #1F2 !important;
-            height: 60px;
-            padding: 10px;
-            margin-bottom: 20px;
-      `}
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    ${respond.handheld`
+      height: 60px;
+      padding: 10px;
+      margin-bottom: 20px;
+    `}
     }`,
+};
+export const mix_flex = {
+  center: (...args) => css`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }`,
 };
 export const mix_containers = {
   header: (...args) => css`
@@ -41,11 +47,16 @@ export const mix_containers = {
     align-items: center;
     justify-content: space-between;
     ${respond.handheld`
-      background-color: #1F2 !important;
       height: 60px;
       padding: 10px;
       margin-bottom: 20px;
     `}
+  }`,
+  logo: (...args) => css`
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
   }`,
   menuButton: (...args) => css`
     & > * {
@@ -62,7 +73,6 @@ export const mix_containers = {
     align-items: center;
     justify-content: flex-end;
     ${respond.handheld`
-      background-color: #1F2 !important;
       height: 60px;
       padding: 10px;
       margin-bottom: 20px;

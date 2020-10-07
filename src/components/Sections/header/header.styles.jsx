@@ -2,13 +2,15 @@
 import { Link } from "react-router-dom";
 //Libraries
 import styled from "styled-components";
+//Mixins
+import { mix_neumorphic, mix_containers, mix_flex } from "../../../design/mixins.styles";
+//Responsive
+import { respond } from "../../../design/responsive";
 //Design
-import {respond} from '../../../design/responsive';
 import colors from "../../../design/colors";
-import margins from '../../../design/margins.styles';
 import shadows from "../../../design/shadows.styles";
-import {mix_neumorphic, mix_containers} from "../../../design/mixins.styles";
-import {tablet_medium} from '../../../design/responsive';
+import fonts from '../../../design/fonts.styles';
+import margins from '../../../design/margins.styles';
 import { PrussianBlue_To_Orange } from '../../../design/effects.styles';
 //Assets
 import { ReactComponent as VegeloperLogo } from "../../../assets/SVG/Vegeloper.svg";
@@ -19,53 +21,38 @@ import { ReactComponent as WebWeaverLine } from "../../../assets/SVG/WebWeaver-L
 export const HeaderContainer = styled.div`
   ${mix_containers.header};
   ${mix_neumorphic.onActive_orange};
+  ${respond.desktop_large`
+    background-color: ${colors.redLight};
+  `};
+  ${respond.desktop_medium`
+    background-color: ${colors.redDark};
+  `};
+  ${respond.tablet_large`
+    background-color: ${colors.blueLight};
+  `};
+  ${respond.tablet_medium`
+    background-color: ${colors.blueDark};
+  `};
 `;
 
 export const LogoContainer = styled(Link)`
+  ${mix_containers.logo};
   height: 50px;
   margin-left: 30px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;  
-
-  @media screen and (max-width: 800px) {
-    width: 50px;
-    padding: 0;
-  }
-`;
-
-export const LogoCard = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100px;
-  width: 80px;
-  border-radius: 12px;
-  border-radius: 5px;
-  box-shadow: 
-    2px 2px 8px 2px rgba(125, 126, 127, 0.52),
-    -3px -3px 8px 2px rgba(255, 255, 255, 0.63);
-  box-shadow: var(--shadow-dark);
-
 `;
 
 export const LogoSVG = styled(VegeloperLogo)`
   width: 60px;
   height: 60px;
-  fill: #eb5e28;
+  ${respond.tablet_medium`
+    display: none;
+  `};
 `;
 
-
 export const LogoText = styled.p`
-  ${'' /* fill: #003153; */}
+  ${fonts.logo};
   color: ${colors.primary};
-  font-family: "Barriecito", cursive;
-  font-size: 3.2rem;
-  font-weight: 400;
   margin-left: 10px;
-  z-index: var(--layer-G);;
 `;
 
 export const LogoLine = styled(WebWeaverLine)`
@@ -79,24 +66,22 @@ export const LogoLine = styled(WebWeaverLine)`
 
 export const MenuButtonsContainer = styled.div`
   ${mix_containers.menuButton}
-  ${tablet_medium};
   margin-right: ${margins.norm};
-  
   width: 50%;
   height: 100%;
 `;
 
 
 export const MenuButton = styled(Link)`
-  --props-variant-default-background-color: none;
-  --props-variant-active-background-color: #d65524;
-  --props-variant-default-background-color-onHover: #f8f8f9;
-  --props-variant-active-background-color-onHover: #f8f8f9;
-  --props-shape-default: 5px;
-  --props-shape-soft: 20px;
-  --props-shape-rounded: 50%;
 
   ${mix_neumorphic.onActive_orange};
+  ${mix_flex.center};
+  ${fonts.menuButton}
+  color: ${colors.primary};
+  height: 40px;
+  width: 80px;
+  margin-right: 10px;
+  cursor: pointer;
 
   border-radius: 1px;
   border-bottom-left-radius: 0px;
@@ -104,6 +89,7 @@ export const MenuButton = styled(Link)`
   position: relative;
   vertical-align: middle;
   overflow: hidden;
+
   &:hover ${PrussianBlue_To_Orange} {
     color: ${colors.accent};
   }
@@ -156,23 +142,9 @@ export const MenuButton = styled(Link)`
       border-bottom-color 0s 1.5s,
       width 0.5s ease 1.5s; // And then exanding width
   }
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 40px;
-  width: 80px;
-  font-size: 12px;
-  font-weight: 800;
-  margin-right: 10px;
-  color: #003153;
-  font-family: "Montserrat", sans-serif;
-  cursor: pointer;
 
   &:hover {
-    background-color: ${({ variant }) =>
-      variant === "active"
-        ? "var(--props-variant-active-background-color-onHover)"
-        : "var(--props-variant-default-background-color-onHover)"};
+    background-color: ${colors.white};
   }
 
   &:active {
