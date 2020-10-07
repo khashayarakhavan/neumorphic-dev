@@ -31,7 +31,7 @@ export const Header = (props) => {
   const { hidden } = props;
 
   return (
-    <HeaderContainer id="topMenu">
+    <HeaderContainer variant="active" id="topMenu">
       <LogoContainer to="/">
           <LogoSVG />
           <LogoLine />

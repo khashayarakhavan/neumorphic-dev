@@ -1,14 +1,5 @@
 import colors from './colors';
 
-export const shadow_neu_light__insetOrange = () => {
-      return `4px 4px 15px 2px ${colors.shadows.lighter},
-          -3px -3px 12px 2px ${colors.shadows.lightest},
-          inset 0px -4px 0px 0px ${colors.accent};`;
-};
-export const shadow_neu_light = () => {
-      return `0px 0px 15px 2px ${colors.shadows.dark},
-          -1px -1px 12px 2px ${colors.shadows.lightest};`;
-};
 
 export default {
   shadows: {
@@ -39,14 +30,16 @@ export default {
     dark: "darkgrey",
   },
 
-  CTA: {
-    lightest: "rgba(125,126,127,0.2)",
+  menu: {
+    right: "rgba(125,126,127,0.2)",
     lighter: " rgba(125,126,127,0.4)",
     light: "grey",
     dark: "darkgrey",
   },
-  white: "#fff",
-  primary: "#003153",
+  right: "40px",
+  norm: "4rem",
+  big: "100px",
+  small: "10px",
   accent: "#D65524",
   black: "black",
   palePink: "#fde2e4",

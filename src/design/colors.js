@@ -1,17 +1,17 @@
 
 export default {
   shadows: {
-    lightest: "rgba(125,126,127,0.2)",
-    lighter: " rgba(125,126,127,0.4)",
-    light: "grey",
-    dark: "darkgrey",
+    lightest: "rgba(125, 126, 127, 0.8)",
+    lighter: " rgba(125, 126, 127, 0.6)",
+    light: "rgba(125, 126, 127, 0.4)",
+    dark: "rgba(125, 126, 127, 0.2)",
   },
 
   highlights: {
-    lightest: "rgba(125,126,127,0.2)",
-    lighter: " rgba(125,126,127,0.4)",
-    light: "grey",
-    dark: "darkgrey",
+    lightest: "rgba(255, 255, 255, 0.9)",
+    lighter: " rgba(255, 255, 255, 0.8)",
+    light: "rgba(255, 255, 255, 0.7)",
+    dark: "rgba(255, 255, 255, 0.5)",
   },
 
   CTA: {
@@ -22,6 +22,7 @@ export default {
   },
   white: "#fff",
   primary: "#003153",
+  accent: "#D65524",
   black: "black",
   palePink: "#fde2e4",
   paleYellow: "#fff1e6",
@@ -42,8 +43,9 @@ export default {
   yellowLight: "#ffc107",
   yellowDark: "#715605",
 
-  redLight: "#e91e63",
-  redDark: "#670a2a",
+  redLight: "rgba(220, 30, 0, 0.912)",
+
+  redDark: "rgba(120, 30, 0, 0.912)",
 };
 
 export const ColorsThemeFelal = {
