@@ -2,9 +2,11 @@
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 import { createGlobalStyle , injectGlobal} from 'styled-components';
-
+import {respond} from './responsive';
 import { selectDarkMode } from "../redux/themes/themes.selectors";
-import { fontSize } from "./sizes/index";
+
+import fonts from './fonts.styles';
+import colors from './colors';
 
 const GlobalStyle = createGlobalStyle`
 
@@ -22,6 +24,12 @@ const GlobalStyle = createGlobalStyle`
     src: url("Fonts/Helvetica/Helvetica.ttf") format('ttf');
   }
 
+   @font-face {
+    font-family: "Transat-Light";
+     src: url("Fonts/Transat/Light/transat_light-webfont.woff") format('woff'),
+	url("Fonts/Transat/Light/transat_light-webfont.woff2") format('woff2');
+  }
+
 ${
   "" /* @font-face {
   font-family: "linea-basic-10";
@@ -36,57 +44,44 @@ ${
 } */
 }
 
- @font-face {
-    font-family: "Transat-Light";
-     src: url("Fonts/Transat/Light/transat_light-webfont.woff") format('woff'),
-	url("Fonts/Transat/Light/transat_light-webfont.woff2") format('woff2');
-  }
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
 
-	body {
-		${"" /* margin: 0px auto; */}
-		${
-      "" /* background: linear-gradient(-45deg, rgba(240,240,243,1), rgba(209,217,230,.61))   !important;  */
-    }
-		background: linear-gradient(45deg,  rgb(242, 243, 247) , rgba(229, 229, 229, 0.1) )   !important;  
-		${
-      "" /* background: linear-gradient(-95deg,  rgb(242, 243, 247) , rgba(209,217,230,.261) )   !important;   */
-    }
-		 ${"" /* background: #E5E5E5 !important; */}
-		font-family: 'Open Sans Condensed';
-		${"" /* padding: 0px 40px; */}
-		${
-      "" /* background-color: ${(props) => props.theme.background};
-		color: ${(props) => props.theme && props.theme.foreground}; */
-    }
-		
-		${
-      "" /* background-color: ${(props) => props.darkMode ? 'black' : backgroundColor}; */
-    }
-		
-		${"" /* color: ${(props) => props.darkMode ? 'white' : 'black'}; */}
-		
-		font-size: ${fontSize};
-		
-		@media screen and (max-width: 800px) {
-			${"" /* padding: 10px; */}
-		}
-	}
+a,
+a:link,
+a:hover {
+	text-decoration: none;
+}
 
+html {
+    box-sizing: border-box;
+    // This defines what 1rem is
+    // 1rem = 10px; 10px/16px = 62.5%
+    font-size: 62.5%; /* 10px */
+    ${respond.tablet_large`
+       font-size: 50%; /* 8px */
+    `}
+}
 
+body {
+    ${fonts.text};
+    color: ${colors.primary};
+    line-height: 1.6;
+    background: linear-gradient(45deg,
+      rgb(242, 243, 247) ,
+      rgba(229, 229, 229, 0.1) );
+}
 
-	a,
-	a:link,
-	a:hover {
-		text-decoration: none;
-		${"" /* color: ${(props) => props.theme.foreground }; */}
-		
-	}
+::selection {
+    background-color: ${colors.primary};
+    color: ${colors.white};
+}
 
-	* {
-		box-sizing: border-box;
-		transition: background-color .3s ease-out;
-		
-	}
 `;
 
 

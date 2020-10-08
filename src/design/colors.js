@@ -20,6 +20,7 @@ export default {
     light: "grey",
     dark: "darkgrey",
   },
+  
   white: "rgb(248, 248, 249)",
   primary: "#003153",
   accent: "#D65524",

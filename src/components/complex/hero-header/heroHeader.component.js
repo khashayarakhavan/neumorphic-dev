@@ -34,7 +34,7 @@ const HeroHeaderComponent = () => (
         a full stack web developer and I love &nbsp;
         <OnHover_palePink>coding</OnHover_palePink>,&nbsp;
         <OnHover_paleYellow>science</OnHover_paleYellow> &
-        <OnHover_Green>French</OnHover_Green>language!
+        <OnHover_Green>French</OnHover_Green>&nbsp;language!
       </TEXT>
       <Button>
         Pleased to meet you 😊 <br />

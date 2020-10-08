@@ -3,11 +3,12 @@ import { Link } from "react-router-dom";
 //Libraries
 import styled from "styled-components";
 //Mixins
-import { mix_neumorphic, mix_containers, mix_flex } from "../../../design/mixins.styles";
+import { mix_containers, mix_flex } from "../../../design/mixins.styles";
 //Responsive
 import { respond } from "../../../design/responsive";
 //Design
 import colors from "../../../design/colors";
+import sizes from "../../../design/sizes";
 import shadows from "../../../design/shadows.styles";
 import fonts from '../../../design/fonts.styles';
 import margins from '../../../design/margins.styles';
@@ -20,67 +21,64 @@ import { ReactComponent as WebWeaverLine } from "../../../assets/SVG/WebWeaver-L
 //Code
 export const HeaderContainer = styled.div`
   ${mix_containers.header};
-  ${mix_neumorphic.onActive_orange};
   ${respond.desktop_large`
-    background-color: ${colors.redLight};
+    
   `};
   ${respond.desktop_medium`
-    background-color: ${colors.redDark};
+    
   `};
   ${respond.tablet_large`
-    background-color: ${colors.blueLight};
+    
   `};
   ${respond.tablet_medium`
-    background-color: ${colors.blueDark};
+    
   `};
 `;
 
 export const LogoContainer = styled(Link)`
   ${mix_containers.logo};
-  height: 50px;
-  margin-left: 30px;
+  height: 5rem;
+  margin-left: 3rem;
 `;
 
 export const LogoSVG = styled(VegeloperLogo)`
-  width: 60px;
-  height: 60px;
+  width: 6rem;
+  height: 6rem;
   ${respond.tablet_medium`
     display: none;
   `};
 `;
 
 export const LogoText = styled.p`
-  ${fonts.logo};
+  ${fonts.mixins.logo};
   color: ${colors.primary};
-  margin-left: 10px;
+  margin-left: ${sizes.margin.small};
 `;
 
 export const LogoLine = styled(WebWeaverLine)`
-  width: 10px;
-  height: 30px;
-  fill: #003153;
-  margin-left: 10px;
-  margin-top: -5px;
+  width: 1rem;
+  height: 3rem;
+  fill: ${colors.primary};
+  margin-left: 1rem;
+  margin-top: -0.5rem;
 `;
-
 
 export const MenuButtonsContainer = styled.div`
   ${mix_containers.menuButton}
-  margin-right: ${margins.norm};
+  margin-right: ${sizes.margin.larger};
   width: 50%;
   height: 100%;
 `;
 
 
 export const MenuButton = styled(Link)`
-
-  ${mix_neumorphic.onActive_orange};
+  ${shadows.mixins.neumorphic.original};
+  ${fonts.mixins.menuButton}
   ${mix_flex.center};
-  ${fonts.menuButton}
   color: ${colors.primary};
-  height: 40px;
-  width: 80px;
-  margin-right: 10px;
+  margin-right: ${sizes.margin.small};
+  height: 4rem;
+  width: 8rem;
   cursor: pointer;
 
   border-radius: 1px;
@@ -151,6 +149,10 @@ export const MenuButton = styled(Link)`
     transform: translateY(2px);
     transition: transform 0.25s ease;
   }
+`;
+
+export const MenuButtonOrange = styled(MenuButton)`
+  ${shadows.mixins.neumorphic.onActive_orange};
 `;
 
 MenuButton.displayName = "OptionLink";

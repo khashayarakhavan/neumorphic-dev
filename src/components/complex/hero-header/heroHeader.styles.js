@@ -1,15 +1,17 @@
 //Libraries
 import styled from "styled-components";
+import fonts from '../../../design/fonts.styles';
+import colors from '../../../design/colors';
+import sizes from '../../../design/sizes';
+import shadows from '../../../design/shadows.styles';
 
 //Code
 export const HeroHeaderContainer = styled.header`
   display: grid;
   height: 90vh;
-  grid-template-columns: 1fr minmax(500px, 1fr);
+  grid-template-columns: 1fr 1fr;
   max-width: 100%;
-  overflow: hidden !important;
-  box-sizing: border-box;
-  padding: 0px 50px 20px 50px !important;
+  padding: ${sizes.padding.medium};
 `;
 
 export const HeroHeaderLeft = styled.div`
@@ -18,27 +20,21 @@ export const HeroHeaderLeft = styled.div`
 `;
 
 export const TEXT = styled.span`
-  font-family: 'Nunito', sans-serif;
-  font-weight: 400;
-  color: #094e7c;
+  ${fonts.mixins.text};
+  color: ${colors.primary};
+  margin-left: ${sizes.margin.smaller};
+  margin-top: ${sizes.margin.largest} ;
+  margin-bottom: ${sizes.margin.large};
+  line-height: ${sizes.lineHeight.large} ;
   display:block;
-  font-size: 20px !important;
-  line-height: 30px !important;
-  margin-left: 5px;
-  margin-top: 60px !important;
-  margin-bottom: 30px !important;
 `;
 
-
-
 export const H1 = styled.span`
-  font-family: 'Rubik Mono One', sans-serif; 
-  font-weight: 400 !important; 
-  font-size: 75px !important;
-  line-height: 80px !important;
-  color: #094e7c; 
-  margin-bottom: 30px !important;
-  margin-block-end: 30px !important;
+  ${fonts.mixins.heroHeader};
+  color: ${colors.primary};
+  line-height: ${sizes.lineHeight.extraLarge};
+  margin-bottom: ${sizes.margin.large};
+  margin-block-end: ${sizes.margin.large};
 `;
 
 export const Button = styled.div`
@@ -47,10 +43,8 @@ export const Button = styled.div`
   &,
   &:link,
   &:visited {
-    font-family: "Montserrat", sans-serif !important;
+    ${fonts.mixins.CTA.visitProfile}};
     display: block;
-    font-size: 16px !important;
-    font-weight: 400 !important;
     line-height: 30px !important;
     margin-top: 60px !important;
     margin-bottom: 30px !important;
@@ -63,12 +57,10 @@ export const Button = styled.div`
     border-radius: 10px;
     transition: all 0.4s;
     position: relative;
-    font-size: 1.6rem;
     border: none;
     cursor: pointer;
     color: #094e7c;
-    box-shadow: 4px 4px 15px 2px rgba(125, 126, 127, 0.42),
-           -3px -3px 12px 2px rgba(255, 255, 255, 0.93);
+    ${shadows.mixins.neumorphic.original};
   }
 
   &:hover {

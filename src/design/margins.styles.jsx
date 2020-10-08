@@ -2,8 +2,8 @@ import colors from './colors';
 
 
 export default {
-  shadows: {
-    lightest: "rgba(255, 255, 255, 0.93)",
+  header: {
+    margin_left: "rgba(255, 255, 255, 0.93)",
     lighter: " rgba(125, 126, 127, 0.4)",
     light: "grey",
     dark: "darkgrey",

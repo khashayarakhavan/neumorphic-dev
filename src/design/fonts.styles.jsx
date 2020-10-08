@@ -37,16 +37,51 @@
 import {css} from 'styled-components';
 
 const fonts = {
-  logo: (...args) => css`
-    font-family: "Barriecito", cursive;
-    font-size: 3.2rem;
-    font-weight: 400;
-  `,
-  menuButton: (...args) => css`
-    font-family: "Montserrat", sans-serif;
-    font-size: 12px;
-    font-weight: 800;
-  `,
+  size: {
+    extraLarge: "7.5rem",
+    large: "2rem",
+    medium: "1rem",
+    small: "0.8rem",
+  },
+  mixins: {
+    CTA: {
+      visitProfile: (...args) => css`
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        font-size: 1.6rem;
+      `,
+      callMe: (...args) => css`
+        font-family: "Barriecito", cursive;
+        font-size: 3.2rem;
+        font-weight: 400;
+      `,
+      emailMe: (...args) => css`
+        font-family: "Barriecito", cursive;
+        font-size: 3.2rem;
+        font-weight: 400;
+      `,
+    },
+    logo: (...args) => css`
+      font-family: "Barriecito", cursive;
+      font-size: 3.2rem;
+      font-weight: 400;
+    `,
+    menuButton: (...args) => css`
+      font-family: "Montserrat", sans-serif;
+      font-size: 1.2rem;
+      font-weight: 800;
+    `,
+    text: (...args) => css`
+      font-family: "Nunito", sans-serif;
+      font-size: 2rem;
+      font-weight: 400;
+    `,
+    heroHeader: (...args) => css`
+      font-family: "Rubik Mono One", sans-serif;
+      font-weight: 400;
+      font-size: 7.5rem;
+    `,
+  },
 };
 
 export default (fonts);

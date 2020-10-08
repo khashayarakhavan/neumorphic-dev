@@ -22,6 +22,7 @@ import {
   LogoLine,  
   LogoText,
   MenuButton,
+  MenuButtonOrange,
   MenuButtonsContainer
 } from './header.styles';
 
@@ -38,10 +39,10 @@ export const Header = (props) => {
           <LogoText>vegeloper</LogoText>
       </LogoContainer>
       <MenuButtonsContainer>
-        <MenuButton variant="active" to="/sayHi">         
+        <MenuButtonOrange variant="active" to="/sayHi">         
           /say
           <PrussianBlue_To_Orange>Hi</PrussianBlue_To_Orange>
-        </MenuButton>
+        </MenuButtonOrange>
         <MenuButton  to="/aboutMe">
           /about
           <PrussianBlue_To_Orange>Me</PrussianBlue_To_Orange>

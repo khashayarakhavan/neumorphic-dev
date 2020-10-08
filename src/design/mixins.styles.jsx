@@ -39,6 +39,13 @@ export const mix_flex = {
     align-items: center;
   }`,
 };
+export const mix_grid = {
+  center: (...args) => css`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }`,
+};
 export const mix_containers = {
   header: (...args) => css`
     height: 10vh;
@@ -53,10 +60,8 @@ export const mix_containers = {
     `}
   }`,
   logo: (...args) => css`
-    display: flex;
+    ${mix_flex.center};
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
   }`,
   menuButton: (...args) => css`
     & > * {

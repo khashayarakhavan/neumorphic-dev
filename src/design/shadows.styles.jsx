@@ -1,28 +1,38 @@
 import colors from './colors';
+import { css } from "styled-components";
 
-export const shadow_neu_light__insetOrange = () => {
-      return `4px 4px 15px 2px ${colors.shadows.lighter},
-          -3px -3px 12px 2px ${colors.shadows.lightest},
-          inset 0px -4px 0px 0px ${colors.accent};`;
-};
-export const shadow_neu_light = () => {
-      return `0px 0px 15px 2px ${colors.shadows.dark},
-          -1px -1px 12px 2px ${colors.shadows.lightest};`;
-};
 
-export default {
-  shadows: {
-    lightest: "rgba(255, 255, 255, 0.93)",
-    lighter: " rgba(125, 126, 127, 0.4)",
-    light: "grey",
-    dark: "darkgrey",
+
+
+const shadows = {
+  mixins: {
+    neumorphic: {
+      onActive_orange: (...args) => css`
+        box-shadow:  ${({ variant }) =>
+          variant === "active"
+            ? shadows.neumorphic.orange
+            : shadows.neumorphic.norm};
+        `,
+      norm: (...args) => css`
+        box-shadow: ${shadows.neumorphic.norm};
+        `,
+      light: (...args) => css`
+        box-shadow: ${shadows.neumorphic.light};
+        `,
+      red: (...args) => css`
+        box-shadow: ${shadows.neumorphic.red};
+        `,
+      original: (...args) => css`
+        box-shadow: ${shadows.neumorphic.original};
+        `,
+    },
   },
   neumorphic: {
     lightest: "rgba(255, 255, 255, 0.93)",
     lighter: " rgba(125, 126, 127, 0.4)",
     light: `0px 0px 15px 2px ${colors.shadows.light},
           -1px -1px 12px 2px ${colors.highlights.lighter}`,
-    dark: "darkgrey",
+    dark: "4px 4px 15px 2px ${colors.greyDark}",
     norm: `4px 4px 15px 2px ${colors.shadows.lighter},
           -3px -3px 12px 2px ${colors.highlights.lightest}`,
     orange: `4px 4px 15px 2px ${colors.shadows.lighter},
@@ -30,6 +40,8 @@ export default {
           inset 0px -4px 0px 0px ${colors.accent}`,
     red: `4px 4px 15px 2px ${colors.redLight},
           -3px -3px 12px 2px ${colors.redDark}`,
+    original: `4px 4px 15px 2px  ${colors.shadows.light},
+           -3px -3px 12px 2px ${colors.highlights.lightest}`,
   },
 
   highlights: {
@@ -71,3 +83,5 @@ export default {
   redLight: "#e91e63",
   redDark: "#670a2a",
 };
+
+export default shadows;
