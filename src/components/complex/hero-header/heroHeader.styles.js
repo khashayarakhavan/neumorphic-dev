@@ -1,14 +1,25 @@
 //Libraries
 import styled from "styled-components";
+//Mixins
+import mixins from '../../../design/mixins.styles';
+//Designs
 import fonts from '../../../design/fonts.styles';
 import colors from '../../../design/colors';
 import sizes from '../../../design/sizes';
 import shadows from '../../../design/shadows.styles';
+import events from '../../../design/events.styles';
+import {background_change} from '../../../design/motions.styles';
+
 
 //Code
 export const HeroHeaderContainer = styled.header`
   display: grid;
   height: 90vh;
+  background: linear-gradient(
+    -180deg,
+    rgb(242, 243, 247),
+    rgb(234, 241, 249)
+  );
   grid-template-columns: 1fr 1fr;
   max-width: 100%;
   padding: ${sizes.padding.medium};
@@ -34,7 +45,42 @@ export const H1 = styled.span`
   color: ${colors.primary};
   line-height: ${sizes.lineHeight.extraLarge};
   margin-bottom: ${sizes.margin.large};
-  margin-block-end: ${sizes.margin.large};
+  margin-block-end: ${sizes.margin.large};  
+`;
+
+export const Skill_1 = styled.span`
+  ${events.mixins.onHover.palePink};
+  ${mixins.flex.inlineCenter};
+  animation: ${background_change(colors.palePink)} 3s 2s infinite;
+  width: 60px;
+  height: 50px;
+
+  &:hover {
+    background-color: ${colors.palePink};
+  }
+`;
+
+export const Skill_2 = styled.span`
+  ${events.mixins.onHover.palePink};
+  ${mixins.flex.inlineCenter};
+  animation: ${background_change(colors.paleYellow)} 3s 3.5s infinite;
+  width: 60px;
+  height: 50px;
+
+  &:hover {
+    background-color: ${colors.paleYellow};
+  }
+`;
+export const Skill_3 = styled.span`
+  ${events.mixins.onHover.palePink};
+  ${mixins.flex.inlineCenter};
+  animation: ${background_change(colors.paleBlue)} 3s 5s infinite;
+  width: 60px;
+  height: 50px;
+
+  &:hover {
+    background-color: ${colors.paleBlue};
+  }
 `;
 
 export const Button = styled.div`

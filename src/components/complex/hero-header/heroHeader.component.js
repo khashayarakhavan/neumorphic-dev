@@ -17,6 +17,9 @@ import {
   H1,
   HeroHeaderContainer,
   HeroHeaderLeft,
+  Skill_1,
+  Skill_2,
+  Skill_3,
 } from "./heroHeader.styles";
 
 
@@ -25,16 +28,20 @@ const HeroHeaderComponent = () => (
   <HeroHeaderContainer id="header">
     <HeroHeaderLeft>
       <H1>
-        Hi
-        <Accent_fireOrange>.</Accent_fireOrange>
-        <br />I<Accent_mateBlue>’</Accent_mateBlue>m
-        <Accent_fireOrange>&nbsp;K</Accent_fireOrange>hashi
+        <p>
+          Hi<Accent_fireOrange>.</Accent_fireOrange>
+        </p>
+        <p>
+          I<Accent_mateBlue>’</Accent_mateBlue>m
+          <Accent_fireOrange>&nbsp;K</Accent_fireOrange>hashi
+        </p>
       </H1>
       <TEXT>
         a full stack web developer and I love &nbsp;
-        <OnHover_palePink>coding</OnHover_palePink>,&nbsp;
-        <OnHover_paleYellow>science</OnHover_paleYellow> &
-        <OnHover_Green>French</OnHover_Green>&nbsp;language!
+        <Skill_1>coding</Skill_1>, &nbsp;
+        <Skill_2>science</Skill_2> &&nbsp;
+        <Skill_3>French</Skill_3>
+        &nbsp;language!
       </TEXT>
       <Button>
         Pleased to meet you 😊 <br />

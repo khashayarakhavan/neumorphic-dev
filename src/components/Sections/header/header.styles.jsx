@@ -21,6 +21,8 @@ import { ReactComponent as WebWeaverLine } from "../../../assets/SVG/WebWeaver-L
 //Code
 export const HeaderContainer = styled.div`
   ${mix_containers.header};
+  height: 10vh;
+  background-color: rgb(242, 243, 247);
   ${respond.desktop_large`
     
   `};

@@ -2,6 +2,32 @@ import shadows from './shadows.styles';
 import {respond} from './responsive';
 import {css} from 'styled-components';
 
+//Code
+const mixins = {
+  size: {
+    extraLarge: "7.5rem",
+    large: "2rem",
+    medium: "1rem",
+    small: "0.8rem",
+  },
+  flex: {
+    center: (...args) => css`
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }`,
+    inlineCenter: (...args) => css`
+      display: inline-flex;
+      align-items: center;
+      align-content: center;
+      justify-items: center;
+      justify-content: center;
+    }`,
+  },
+};
+
+
+
 
 export const mix_neumorphic = {
   onActive_orange: (...args) => css`
@@ -38,7 +64,15 @@ export const mix_flex = {
     justify-content: center;
     align-items: center;
   }`,
+  inlineCenter: (...args) => css`
+    display: inline-flex;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+  }`,
 };
+
 export const mix_grid = {
   center: (...args) => css`
     display: flex;
@@ -48,15 +82,12 @@ export const mix_grid = {
 };
 export const mix_containers = {
   header: (...args) => css`
-    height: 10vh;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     ${respond.handheld`
-      height: 60px;
-      padding: 10px;
-      margin-bottom: 20px;
+      //
     `}
   }`,
   logo: (...args) => css`
@@ -88,4 +119,4 @@ export const mix_containers = {
 
 
 
-
+export default mixins;
